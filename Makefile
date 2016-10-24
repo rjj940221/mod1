@@ -1,12 +1,12 @@
 NAME		=	mod1
 SDL2I		=	$(shell sdl2-config --cflags)
 SDL2L		=	$(shell sdl2-config --libs)
-INC			=	-I includes $(SDL2I) $(LIBFTI)
+INC			=	-I includes $(SDL2I)
 LIBS		=	-lm $(SDL2L)
 CFLAGS		=	-Wall -Wextra -Werror -Wno-unused-result -Ofast -pthread $(INC)
 LFLAGS		=	-lpthread $(INC) $(LIBS)
-CC			=	g++ -std=c++11
-LD			=	g++ -std=c++11
+CC			=	g++ -std=c++11 -g3
+LD			=	g++ -std=c++11 -g3
 
 INCLUDE		=	$(shell find includes -name "*.h")
 SRC			=	$(shell find src -name "*.cpp")
