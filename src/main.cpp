@@ -1,7 +1,5 @@
 #include "../includes/mod1.h"
 
-using namespace std;
-
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
@@ -83,7 +81,7 @@ void read_file(char *file_name, map *file_map) {
         }
         infile.close();
 
-        *file_map = map(points);
+        *file_map = map(points, 300, 300);
     }
 }
 
@@ -93,9 +91,9 @@ void iso_map(uint32_t *px, map *filemap) {
     int ix = -1;
     int iy;
 
-    while (++ix < MAPX) {
+    while (++ix < 300) {
         iy = -1;
-        while (++iy < MAPY) {
+        while (++iy < 300) {
             t_point temp = filemap->get_point(ix, iy);
             /*double rand;
             rand = temp.z;
@@ -145,10 +143,10 @@ int main(int ac, char **av) {
         memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
 
         int x = -1;
-        while (++x < MAPX){
+        while (++x < 300){
             int y = -1;
             px = &pixels[x * SCREEN_WIDTH];
-            while (++y < MAPY)
+            while (++y < 300)
             {
                 *px = filemap.get_color(x, y);
                 px++;

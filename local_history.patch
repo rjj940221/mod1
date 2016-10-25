@@ -1,0 +1,46 @@
+Index: includes/map.h.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- includes/map.h.h	(revision )
++++ includes/map.h.h	(revision )
+@@ -0,0 +1,5 @@
++#include <stdio>
++#ifndef MOD1_MAP_H_H
++#define MOD1_MAP_H_H
++
++#endif //MOD1_MAP_H_H
+Index: includes/mod1.h.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- includes/mod1.h.h	(revision )
++++ includes/mod1.h.h	(revision )
+@@ -0,0 +1,8 @@
++//
++// Created by Robert JONES on 2016/10/25.
++//
++
++#ifndef MOD1_MOD1_H_H
++#define MOD1_MOD1_H_H
++
++#endif //MOD1_MOD1_H_H
+Index: CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- CMakeLists.txt	(revision )
++++ CMakeLists.txt	(revision )
+@@ -8,7 +8,7 @@
+ # includes cmake/FindSDL2.cmake
+ set(CMAKE_MODULE_PATH ~/goinfre/Softs/collector-master/cmake)
+ 
+-set(SOURCE_FILES src/main.cpp src/map.cpp includes/map.h includes/mod1.h)
++set(SOURCE_FILES src/main.cpp src/map.cpp includes/map.h includes/mod1.h includes/mod1.h.h includes/map.h.h)
+ 
+ find_package(SDL2 REQUIRED)
+ include_directories(${SDL2_INCLUDE_DIR})
+\ No newline at end of file

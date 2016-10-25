@@ -4,13 +4,13 @@
 
 #include "../includes/map.h"
 
-t_point    **ft_malloc_mapdata()
+t_point    **ft_malloc_mapdata(int mapx, int mapy)
 {
     t_point ** map_data;
-    map_data = (t_point**)malloc(sizeof(t_point*) * MAPX);
-    for (int i = 0; i < MAPX; i++)
+    map_data = (t_point**)malloc(sizeof(t_point*) * mapx);
+    for (int i = 0; i < mapx; i++)
     {
-        map_data[i] = (t_point*)malloc(sizeof(t_point) * MAPY);
+        map_data[i] = (t_point*)malloc(sizeof(t_point) * mapy);
     }
     return (map_data);
 }
@@ -38,13 +38,15 @@ map::map() {
 
 }
 
-map::map(vector <t_point> points) {
+map::map(vector <t_point> points , int mapx, int mapy) {
     int x = 0;
     this->points = points;
+    this->mapx = mapx;
+    this->mapy = mapy;
     double centerx = 0;
     double centery = 0;
 
-    this->map_data = ft_malloc_mapdata();
+    this->map_data = ft_malloc_mapdata(mapx, mapy);
 
     int count = 0;
     std::vector<t_point>::iterator iter = points.begin();
@@ -67,30 +69,30 @@ map::map(vector <t_point> points) {
         cout << "centerx " << centerx << " centery " << centery  << " from " << count << " points"<< endl;
     }
     else {
-        centerx = ((MAPX - 1) / 2);
-        centery = ((MAPY - 1) / 2);
+        centerx = ((this->mapx - 1) / 2);
+        centery = ((this->mapy - 1) / 2);
     }
-    scalex = centerx / ((MAPX) / 2);
-    scaley = centery / ((MAPY) / 2);
+    scalex = centerx / ((this->mapx) / 2);
+    scaley = centery / ((this->mapy) / 2);
 
     cout << "scalex " << scalex << " scaley " << scaley << endl;
 
-    this->points.push_back(t_point{0, 0, 0, 0, false, 0});
-    this->points.push_back(t_point{0, (MAPY - 1) * scaley, 0, 0, false, 0});
-    this->points.push_back(t_point{(MAPX - 1) * scalex, 0, 0, 0, false, 0});
-    this->points.push_back(t_point{(MAPX - 1) * scalex, (MAPY - 1) * scaley, 0, 0, false, 0});
+    this->points.push_back(t_point{0, 0, 0, 0, 0});
+    this->points.push_back(t_point{0, (this->mapy - 1) * scaley, 0, 0, 0});
+    this->points.push_back(t_point{(this->mapx - 1) * scalex, 0, 0, 0, 0});
+    this->points.push_back(t_point{(this->mapx - 1) * scalex, (this->mapy - 1) * scaley, 0, 0, 0});
 
     this->minhight = (this->minhight > 0) ? 0 : this->minhight;
 
     this->maxhight -= this->minhight;
     cout << "max height: " << this->maxhight << " MIN height: " << this->minhight<< endl << endl;
 
-    while (x < MAPX) {
+    while (x < this->mapx) {
         int y = 0;
-        while (y < MAPY) {
+        while (y < this->mapy) {
             this->map_data[x][y].x = x * scalex;
             this->map_data[x][y].y = y * scaley;
-            this->map_data[x][y].water = false;
+            //this->map_data[x][y].water = false;
             this->map_data[x][y].h = 0;
 
             this->map_data[x][y].z = infer_height(this->map_data[x][y].x, this->map_data[x][y].y);
@@ -146,8 +148,8 @@ t_point *map::nerest_points(double x, double y) {
 }
 
 double map::get_presure(int x, int y) {
-    if (x < MAPX && y < MAPY) {
-        if (this->map_data[x][y].water) {
+    if (x < this->mapx && y < this->mapy) {
+        if (this->map_data[x][y].h > 0) {
             return (WATER_LIQUID_DENCITY * GRAVITY * this->map_data[x][y].h);
         } else
             return (0);
@@ -159,9 +161,9 @@ void map::toString() {
     int x = -1;
     int y;
 
-    while (++x < MAPX) {
+    while (++x < this->mapx) {
         y = -1;
-        while (++y < MAPY) {
+        while (++y < this->mapy) {
             cout << this->map_data[x][y].z << " ";
             //fill_space(this->map_data[x][y].z);
         }
@@ -170,7 +172,7 @@ void map::toString() {
 }
 
 uint32_t map::get_color(int x, int y) {
-    if (x < MAPX && y < MAPY) {
+    if (x < this->mapx && y < this->mapy) {
         double scale = (this->map_data[x][y].z - this->minhight) / this->maxhight;
 
         return ((int) (255 * scale) << 8);
@@ -180,10 +182,10 @@ uint32_t map::get_color(int x, int y) {
 
 
 t_point map::get_point(int x, int y) {
-    if (x < MAPX && y < MAPY){
+    if (x < this->mapx && y < this->mapy){
         return (this->map_data[x][y]);
     }
     else
-        return (t_point{0,0,0,0,false,0});
+        return (t_point{0,0,0,0,0});
 }
 
