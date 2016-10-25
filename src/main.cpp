@@ -107,12 +107,11 @@ void iso_map(uint32_t *px, map *filemap) {
             y /= filemap->get_scaley();
 
 
-            px [((int)(x) * SCREEN_WIDTH) + (int)(y)] = filemap->get_color(ix, iy);
+            px[((int) (x) * SCREEN_WIDTH) + (int) (y)] = filemap->get_color(ix, iy);
         }
     }
 
 }
-
 
 
 int main(int ac, char **av) {
@@ -142,32 +141,44 @@ int main(int ac, char **av) {
 
         memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
 
+        filemap.rain(500);
         int x = -1;
-        while (++x < 300){
+        while (++x < 300) {
             int y = -1;
             px = &pixels[x * SCREEN_WIDTH];
-            while (++y < 300)
-            {
+            while (++y < 300) {
                 *px = filemap.get_color(x, y);
                 px++;
             }
         }
 
-       // iso_map(pixels, &filemap);
+        // iso_map(pixels, &filemap);
+
 
         while (!quit) {
+            int h = 10;
             SDL_UpdateTexture(sdl.texture, NULL, pixels, SCREEN_WIDTH * sizeof(uint32_t));
 
-            SDL_WaitEvent(&event);
-
-            switch (event.type) {
-                case SDL_QUIT:
-                    quit = true;
+            while (SDL_PollEvent(&event)) {
+                switch (event.type) {
+                    case SDL_QUIT:
+                        quit = true;
+                }
             }
 
             SDL_RenderClear(sdl.render);
             SDL_RenderCopy(sdl.render, sdl.texture, NULL, NULL);
             SDL_RenderPresent(sdl.render);
+            filemap.rain(300);
+            int x = -1;
+            while (++x < 300) {
+                int y = -1;
+                px = &pixels[x * SCREEN_WIDTH];
+                while (++y < 300) {
+                    *px = filemap.get_color(x, y);
+                    px++;
+                }
+            }
         }
 
         delete[] pixels;

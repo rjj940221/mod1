@@ -22,15 +22,18 @@ typedef struct s_point
 class map{
 public:
     map();
-    map(vector <t_point> points, int mapx, int mapy);
+    map(vector <t_point> oints, int mapx, int mapy);
     double infer_height(int x, int y);
     t_point *nerest_points(double x, double y);
-    double get_presure(int x, int y);
+    double get_presure(double h);
     void toString();
     uint32_t get_color(int x, int y);
     t_point get_point(int x, int y);
     double  get_scalex(){ return this->scalex;};
     double  get_scaley(){ return this->scaley;};
+    void    flow(double h);
+    void    rain(int max_drops);
+    t_point get_next(int x, int y, double h);
 
 private:
     double      scalex;
@@ -41,6 +44,8 @@ private:
     int         mapy;
     t_point     **map_data;
     vector<t_point>     points;
+    void        destroy_map();
+
 };
 
 #endif //MOD1_MAP_H_H

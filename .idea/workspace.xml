@@ -12,10 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb47171-16a2-414c-9124-9cfea03ab3e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/map.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/mod1.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mod1" afterPath="$PROJECT_DIR$/mod1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mod1.dSYM/Contents/Resources/DWARF/mod1" afterPath="$PROJECT_DIR$/mod1.dSYM/Contents/Resources/DWARF/mod1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/map.h" afterPath="$PROJECT_DIR$/includes/map.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map.cpp" afterPath="$PROJECT_DIR$/src/map.cpp" />
     </list>
@@ -40,40 +40,51 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="165">
               <caret line="11" column="0" selection-start-line="10" selection-start-column="18" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="188" column="32" selection-start-line="188" selection-start-column="32" selection-end-line="188" selection-end-column="32" />
+            <state relative-caret-position="540">
+              <caret line="312" column="23" selection-start-line="312" selection-start-column="23" selection-end-line="312" selection-end-column="23" />
               <folding>
-                <element signature="e#353#544#0" expanded="false" />
-                <element signature="e#546#714#0" expanded="false" />
-                <element signature="e#716#731#0" expanded="false" />
-                <element signature="e#2920#3418#0" expanded="false" />
-                <element signature="e#3420#4217#0" expanded="false" />
-                <element signature="e#4496#4769#0" expanded="false" />
-                <element signature="e#4771#5014#0" expanded="false" />
+                <element signature="e#79#348#0" expanded="false" />
+                <element signature="e#350#541#0" expanded="false" />
+                <element signature="e#543#711#0" expanded="false" />
+                <element signature="e#713#728#0" expanded="false" />
+                <element signature="e#730#2911#0" expanded="false" />
+                <element signature="e#2913#3043#0" expanded="false" />
+                <element signature="e#3045#3543#0" expanded="false" />
+                <element signature="e#3545#4342#0" expanded="false" />
+                <element signature="e#4344#4430#0" expanded="false" />
+                <element signature="e#4432#4705#0" expanded="false" />
+                <element signature="e#4707#5041#0" expanded="false" />
+                <element signature="e#5043#5218#0" expanded="false" />
+                <element signature="e#5220#5448#0" expanded="false" />
+                <element signature="e#5450#7697#0" expanded="false" />
+                <element signature="e#7699#10239#0" expanded="false" />
+                <element signature="e#10241#10269#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+            <state relative-caret-position="510">
+              <caret line="179" column="13" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
               <folding>
+                <element signature="e#93#289#0" expanded="false" />
                 <element signature="e#291#418#0" expanded="false" />
                 <element signature="e#420#586#0" expanded="false" />
                 <element signature="e#588#1338#0" expanded="false" />
+                <element signature="e#2327#3073#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -82,18 +93,8 @@
       <file leaf-file-name="map.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/map.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mod1.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/mod1.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="628">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,9 +114,9 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/includes/map.h.h" />
         <option value="$PROJECT_DIR$/includes/mod1.h" />
-        <option value="$PROJECT_DIR$/src/map.cpp" />
         <option value="$PROJECT_DIR$/includes/map.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/map.cpp" />
       </list>
     </option>
   </component>
@@ -126,8 +127,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="771" />
-    <option name="width" value="1149" />
+    <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -156,7 +156,52 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -360,24 +405,25 @@
       <workItem from="1477051272865" duration="7528000" />
       <workItem from="1477118548462" duration="20897000" />
       <workItem from="1477285018446" duration="18498000" />
-      <workItem from="1477371879239" duration="4665000" />
+      <workItem from="1477371879239" duration="13806000" />
+      <workItem from="1477408677438" duration="2645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51588000" />
+    <option name="totallyTimeSpent" value="63374000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="771" y="0" width="1149" height="1080" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42021278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30284554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30284554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3628049" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3628049" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -407,15 +453,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/map.cpp</url>
-          <line>33</line>
+          <line>31</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -429,13 +483,22 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#353#544#0" expanded="false" />
-            <element signature="e#546#714#0" expanded="false" />
-            <element signature="e#716#731#0" expanded="false" />
-            <element signature="e#2920#3418#0" expanded="false" />
-            <element signature="e#3420#4217#0" expanded="false" />
-            <element signature="e#4496#4769#0" expanded="false" />
-            <element signature="e#4771#5014#0" expanded="false" />
+            <element signature="e#79#348#0" expanded="false" />
+            <element signature="e#350#541#0" expanded="false" />
+            <element signature="e#543#711#0" expanded="false" />
+            <element signature="e#713#728#0" expanded="false" />
+            <element signature="e#730#2911#0" expanded="false" />
+            <element signature="e#2913#3043#0" expanded="false" />
+            <element signature="e#3045#3543#0" expanded="false" />
+            <element signature="e#3545#4342#0" expanded="false" />
+            <element signature="e#4344#4430#0" expanded="false" />
+            <element signature="e#4432#4705#0" expanded="false" />
+            <element signature="e#4707#5041#0" expanded="false" />
+            <element signature="e#5043#5218#0" expanded="false" />
+            <element signature="e#5220#5448#0" expanded="false" />
+            <element signature="e#5450#7697#0" expanded="false" />
+            <element signature="e#7699#10239#0" expanded="false" />
+            <element signature="e#10241#10269#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -445,9 +508,11 @@
         <state relative-caret-position="1740">
           <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
+            <element signature="e#93#289#0" expanded="false" />
             <element signature="e#291#418#0" expanded="false" />
             <element signature="e#420#586#0" expanded="false" />
             <element signature="e#588#1338#0" expanded="false" />
+            <element signature="e#2327#3073#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,13 +530,22 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#353#544#0" expanded="false" />
-            <element signature="e#546#714#0" expanded="false" />
-            <element signature="e#716#731#0" expanded="false" />
-            <element signature="e#2920#3418#0" expanded="false" />
-            <element signature="e#3420#4217#0" expanded="false" />
-            <element signature="e#4496#4769#0" expanded="false" />
-            <element signature="e#4771#5014#0" expanded="false" />
+            <element signature="e#79#348#0" expanded="false" />
+            <element signature="e#350#541#0" expanded="false" />
+            <element signature="e#543#711#0" expanded="false" />
+            <element signature="e#713#728#0" expanded="false" />
+            <element signature="e#730#2911#0" expanded="false" />
+            <element signature="e#2913#3043#0" expanded="false" />
+            <element signature="e#3045#3543#0" expanded="false" />
+            <element signature="e#3545#4342#0" expanded="false" />
+            <element signature="e#4344#4430#0" expanded="false" />
+            <element signature="e#4432#4705#0" expanded="false" />
+            <element signature="e#4707#5041#0" expanded="false" />
+            <element signature="e#5043#5218#0" expanded="false" />
+            <element signature="e#5220#5448#0" expanded="false" />
+            <element signature="e#5450#7697#0" expanded="false" />
+            <element signature="e#7699#10239#0" expanded="false" />
+            <element signature="e#10241#10269#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -481,9 +555,11 @@
         <state relative-caret-position="1800">
           <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
           <folding>
+            <element signature="e#93#289#0" expanded="false" />
             <element signature="e#291#418#0" expanded="false" />
             <element signature="e#420#586#0" expanded="false" />
             <element signature="e#588#1338#0" expanded="false" />
+            <element signature="e#2327#3073#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -513,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="165">
           <caret line="11" column="0" selection-start-line="10" selection-start-column="18" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -521,46 +597,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/mod1.h" />
     <entry file="file://$PROJECT_DIR$/includes/map.h" />
+    <entry file="file://$PROJECT_DIR$/src/flow.cpp" />
+    <entry file="file://$PROJECT_DIR$/includes/flow.h" />
     <entry file="file://$PROJECT_DIR$/includes/mod1.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/map.cpp">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="188" column="32" selection-start-line="188" selection-start-column="32" selection-end-line="188" selection-end-column="32" />
-          <folding>
-            <element signature="e#353#544#0" expanded="false" />
-            <element signature="e#546#714#0" expanded="false" />
-            <element signature="e#716#731#0" expanded="false" />
-            <element signature="e#2920#3418#0" expanded="false" />
-            <element signature="e#3420#4217#0" expanded="false" />
-            <element signature="e#4496#4769#0" expanded="false" />
-            <element signature="e#4771#5014#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/map.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="628">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+        <state relative-caret-position="510">
+          <caret line="179" column="13" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
           <folding>
+            <element signature="e#93#289#0" expanded="false" />
             <element signature="e#291#418#0" expanded="false" />
             <element signature="e#420#586#0" expanded="false" />
             <element signature="e#588#1338#0" expanded="false" />
+            <element signature="e#2327#3073#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="312" column="23" selection-start-line="312" selection-start-column="23" selection-end-line="312" selection-end-column="23" />
+          <folding>
+            <element signature="e#79#348#0" expanded="false" />
+            <element signature="e#350#541#0" expanded="false" />
+            <element signature="e#543#711#0" expanded="false" />
+            <element signature="e#713#728#0" expanded="false" />
+            <element signature="e#730#2911#0" expanded="false" />
+            <element signature="e#2913#3043#0" expanded="false" />
+            <element signature="e#3045#3543#0" expanded="false" />
+            <element signature="e#3545#4342#0" expanded="false" />
+            <element signature="e#4344#4430#0" expanded="false" />
+            <element signature="e#4432#4705#0" expanded="false" />
+            <element signature="e#4707#5041#0" expanded="false" />
+            <element signature="e#5043#5218#0" expanded="false" />
+            <element signature="e#5220#5448#0" expanded="false" />
+            <element signature="e#5450#7697#0" expanded="false" />
+            <element signature="e#7699#10239#0" expanded="false" />
+            <element signature="e#10241#10269#0" expanded="false" />
           </folding>
         </state>
       </provider>
