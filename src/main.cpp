@@ -3,6 +3,9 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
+const int MAPX = 10;
+const int MAPY = 10;
+
 void split(const string &s, char delim, vector <string> &elems) {
     stringstream ss;
     ss.str(s);
@@ -81,7 +84,7 @@ void read_file(char *file_name, map *file_map) {
         }
         infile.close();
 
-        *file_map = map(points, 300, 300);
+        *file_map = map(points, MAPX, MAPY);
     }
 }
 
@@ -113,7 +116,6 @@ void iso_map(uint32_t *px, map *filemap) {
 
 }
 
-
 int main(int ac, char **av) {
     map filemap;
     bool quit = false;
@@ -141,12 +143,19 @@ int main(int ac, char **av) {
 
         memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
 
-        filemap.rain(500);
+        filemap.flood(1000);
+        filemap.toString();
+        for (int q = 0; q < 40; q++) {
+            cout <<endl << endl<< "iteration" <<endl;
+            filemap.flow();
+            filemap.toString();
+        }
+
         int x = -1;
-        while (++x < 300) {
+        while (++x < MAPX) {
             int y = -1;
-            px = &pixels[x * SCREEN_WIDTH];
-            while (++y < 300) {
+            px = &pixels[((x  + 4) * SCREEN_WIDTH) + 8];
+            while (++y < MAPY) {
                 *px = filemap.get_color(x, y);
                 px++;
             }
@@ -169,12 +178,12 @@ int main(int ac, char **av) {
             SDL_RenderClear(sdl.render);
             SDL_RenderCopy(sdl.render, sdl.texture, NULL, NULL);
             SDL_RenderPresent(sdl.render);
-            filemap.rain(300);
+            //filemap.flow();
             int x = -1;
-            while (++x < 300) {
+            while (++x < MAPX) {
                 int y = -1;
-                px = &pixels[x * SCREEN_WIDTH];
-                while (++y < 300) {
+                px = &pixels[((x + 4) * SCREEN_WIDTH) + 8];
+                while (++y < MAPY) {
                     *px = filemap.get_color(x, y);
                     px++;
                 }

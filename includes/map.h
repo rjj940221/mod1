@@ -31,9 +31,12 @@ public:
     t_point get_point(int x, int y);
     double  get_scalex(){ return this->scalex;};
     double  get_scaley(){ return this->scaley;};
-    void    flow(double h);
+    void    flow();
+    void    wave(double h);
+    void    flood(double h);
     void    rain(int max_drops);
-    t_point get_next(int x, int y, double h);
+    t_point *get_next(int x, int y);
+    double        solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur);
 
 private:
     double      scalex;
@@ -45,6 +48,7 @@ private:
     t_point     **map_data;
     vector<t_point>     points;
     void        destroy_map();
+    //void        solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur);
 
 };
 
