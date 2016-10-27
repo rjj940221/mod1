@@ -36,7 +36,8 @@ public:
     void    flood(double h);
     void    rain(int max_drops);
     t_point *get_next(int x, int y);
-    double        solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur);
+    double  solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur);
+    double  get_height(double pesure);
 
 private:
     double      scalex;
