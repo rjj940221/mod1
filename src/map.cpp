@@ -165,13 +165,13 @@ t_point *map::nerest_points(double x, double y) {
 
 double map::get_presure(double h) {
     if (h > 0 )
-        return (round( (WATER_LIQUID_DENCITY * GRAVITY * h) * 1000.0 ) / 1000.0);
+        return (round( (WATER_LIQUID_DENCITY * h) * 1000.0 ) / 1000.0);
     else
         return (0);
 }
 
 double map::get_height(double presure) {
-    return (round((presure / (WATER_LIQUID_DENCITY * GRAVITY)) * 1000.0) / 1000.0);
+    return (round((presure / (WATER_LIQUID_DENCITY)) * 1000.0) / 1000.0);
 }
 
 void map::toString() {
@@ -266,7 +266,11 @@ double map::solve(t_point **map, int primx, int primy, int secondx, int secondy,
 
     temp = get_next(secondx, secondy);
     if (temp) {
-        return (get_presure(temp->h + (temp->z - map[primx][primy].z)));
+        //return (get_presure(temp->h + (temp->z - map[primx][primy].z)));
+        if ((temp->h + (temp->z - map[primx][primy].z)) > 0)
+            return (temp->h + (temp->z - map[primx][primy].z));
+        else
+            return (0);
     }
     return (numeric_limits<double>::max());
 }
@@ -302,8 +306,9 @@ void map::flow() {
             deduct = 0;
             move = 0;
             count = 0;
-            presure = get_presure(map_data[x][y].h);
-
+            //presure = get_presure(map_data[x][y].h);
+            presure = map_data[x][y].h;
+            cout << endl << "check point " << x << y << " " << presure << endl;
             if (presure > 0) {
                 presures[0] = solve(map_data, x, y, x - 1, y - 1, presure)/*numeric_limits<double>::max()*/;
                 presures[1] = solve(map_data, x, y, x - 1, y, presure);
@@ -315,6 +320,16 @@ void map::flow() {
                 presures[5] = solve(map_data, x, y, x + 1, y - 1, presure)/*numeric_limits<double>::max()*/;
                 presures[6] = solve(map_data, x, y, x + 1, y, presure);
                 presures[7] = solve(map_data, x, y, x + 1, y + 1, presure)/*numeric_limits<double>::max()*/;
+            }
+
+            cout << "effective height at " << x-1 << " " << y-1 << " "<< presures[0] << endl;
+            cout << "effective height at " << x-1 << " " << y  << " "<< presures[1] << endl;
+            cout << "effective height at " << x-1 << " " << y+1  << " "<< presures[2] << endl;
+            cout << "effective height at " << x << " " << y-1 << " " << presures[3] << endl;
+            cout << "effective height at " << x << " " << y+1 << " " << presures[4] << endl;
+            cout << "effective height at " << x+1 << " " << y-1 << " " << presures[5] << endl;
+            cout << "effective height at " << x+1 << " " << y << " " << presures[6] << endl;
+            cout << "effective height at " << x+1 << " " << y+1 << " " << presures[7] << endl;
 
                 for (int i = 0; i < 8; i++) {
                     if (presures[i] < presure) {
@@ -326,13 +341,12 @@ void map::flow() {
                 move += presure;
                 count++;
                 move = move / count;
+                cout << "ave presur " << move << endl;
 
-                cout <<endl<< "checking point " << x <<" "<< y << " presure " << presure << endl;
-               // cout << "total move " << move << endl;
-                for (int i = 0; i < 8; i++) {
+             /*   for (int i = 0; i < 8; i++) {
                     double moveheight = 0;
                     if (presures[i] < presure) {
-                        moveheight = get_height(move - presures[i]);
+                        moveheight = (move - presures[i]);
 
                         cout << "presure " << presures[i] << " for i:" << i << endl;
                         switch (i) {
@@ -410,7 +424,7 @@ void map::flow() {
                     }
                     cout << endl;
                 }
-            }
+            }*/
         }
     }
     //destroy_map();
@@ -435,5 +449,5 @@ void map::rain(int drops) {
 }
 
 void map::wave(double h) {
-
+ cout << "rain";
 }

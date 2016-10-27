@@ -27,220 +27,287 @@ terain height
 
 iteration
 
-checking point 0 0 presure 3.92e+07
-presure 2.342e+07 for i:7
-moving 805.3 h units to 11
-  3195     4000     4000     4000     4000   
-  4000    805.3        0        0     4000   
-  4000        0        0        0     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 00 4000
+effective height at -1 -1 1.798e+308
+effective height at -1 0 1.798e+308
+effective height at -1 1 1.798e+308
+effective height at 0 -1 1.798e+308
+effective height at 0 1 4851
+effective height at 1 -1 1.798e+308
+effective height at 1 0 4851
+effective height at 1 1 2389
+ave presur 3195
 
-checking point 0 1 presure 3.92e+07
-presure 3.086e+07 for i:3
-moving -224.5 h units to 00
-presure 1.508e+07 for i:6
-moving 1386 h units to 11
-presure 2.95e+07 for i:7
-moving -85.92 h units to 12
-  2970     2924     4000     4000     4000   
-  4000     2191   -85.92        0     4000   
-  4000        0        0        0     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 01 4000
+effective height at -1 0 1.798e+308
+effective height at -1 1 1.798e+308
+effective height at -1 2 1.798e+308
+effective height at 0 0 3149
+effective height at 0 2 4914
+effective height at 1 0 4000
+effective height at 1 1 1538
+effective height at 1 2 3010
+ave presur 2924
 
-checking point 0 2 presure 3.92e+07
-presure 3.025e+07 for i:3
-moving -833.3 h units to 01
-presure 3.025e+07 for i:4
-moving -833.3 h units to 03
-presure 6.122e+06 for i:5
-moving 1628 h units to 11
-presure 2.055e+07 for i:6
-moving 156.5 h units to 12
-presure 6.122e+06 for i:7
-moving 1628 h units to 13
-  2970     2091     2253     3167     4000   
-  4000     3820    70.54     1628     4000   
-  4000        0        0        0     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 02 4000
+effective height at -1 1 1.798e+308
+effective height at -1 2 1.798e+308
+effective height at -1 3 1.798e+308
+effective height at 0 1 3086
+effective height at 0 3 3086
+effective height at 1 1 624.7
+effective height at 1 2 2097
+effective height at 1 3 624.7
+ave presur 2253
 
-checking point 0 3 presure 3.92e+07
-presure 3.086e+07 for i:4
-moving -224.5 h units to 04
-presure 2.95e+07 for i:5
-moving -85.92 h units to 12
-presure 1.508e+07 for i:6
-moving 1386 h units to 13
-  2970     2091     2253     2091     3775   
-  4000     3820   -15.38     3015     4000   
-  4000        0        0        0     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 03 4000
+effective height at -1 2 1.798e+308
+effective height at -1 3 1.798e+308
+effective height at -1 4 1.798e+308
+effective height at 0 2 4914
+effective height at 0 4 3149
+effective height at 1 2 3010
+effective height at 1 3 1538
+effective height at 1 4 4000
+ave presur 2924
 
-checking point 0 4 presure 3.92e+07
-presure 2.342e+07 for i:5
-moving 805.3 h units to 13
-  2970     2091     2253     2091     2970   
-  4000     3820   -15.38     3820     4000   
-  4000        0        0        0     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 04 4000
+effective height at -1 3 1.798e+308
+effective height at -1 4 1.798e+308
+effective height at -1 5 1.798e+308
+effective height at 0 3 4851
+effective height at 0 5 1.798e+308
+effective height at 1 3 2389
+effective height at 1 4 4851
+effective height at 1 5 1.798e+308
+ave presur 3195
 
-checking point 1 0 presure 3.92e+07
-presure 3.086e+07 for i:1
-moving -224.5 h units to 00
-presure 1.508e+07 for i:4
-moving 1386 h units to 11
-presure 2.95e+07 for i:7
-moving -85.92 h units to 21
-  2746     2091     2253     2091     2970   
-  2924     5206   -15.38     3820     4000   
-  4000   -85.92        0        0     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 10 4000
+effective height at 0 -1 1.798e+308
+effective height at 0 0 3149
+effective height at 0 1 4000
+effective height at 1 -1 1.798e+308
+effective height at 1 1 1538
+effective height at 2 -1 1.798e+308
+effective height at 2 0 4914
+effective height at 2 1 3010
+ave presur 2924
 
-checking point 1 4 presure 3.92e+07
-presure 3.086e+07 for i:1
-moving -224.5 h units to 04
-presure 1.508e+07 for i:3
-moving 1386 h units to 13
-presure 2.95e+07 for i:5
-moving -85.92 h units to 23
-  2746     2091     2253     2091     2746   
-  2924     5206   -15.38     5206     2924   
-  4000   -85.92        0   -85.92     4000   
-  4000        0        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 11 0
+effective height at 0 0 1.798e+308
+effective height at 0 1 3149
+effective height at 0 2 4000
+effective height at 1 0 1.798e+308
+effective height at 1 2 1538
+effective height at 2 0 1.798e+308
+effective height at 2 1 4914
+effective height at 2 2 3010
+ave presur 0
 
-checking point 2 0 presure 3.92e+07
-presure 3.025e+07 for i:1
-moving -833.3 h units to 10
-presure 6.122e+06 for i:2
-moving 1628 h units to 11
-presure 2.055e+07 for i:4
-moving 156.5 h units to 21
-presure 3.025e+07 for i:6
-moving -833.3 h units to 30
-presure 6.122e+06 for i:7
-moving 1628 h units to 31
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     5206     2924   
-  2253    70.54        0   -85.92     4000   
-  3167     1628        0        0     4000   
-  4000     4000     4000     4000     4000   
+check point 12 0
+effective height at 0 1 1.798e+308
+effective height at 0 2 3149
+effective height at 0 3 4000
+effective height at 1 1 1.798e+308
+effective height at 1 3 1538
+effective height at 2 1 1.798e+308
+effective height at 2 2 4914
+effective height at 2 3 3010
+ave presur 0
 
-checking point 2 4 presure 3.92e+07
-presure 6.122e+06 for i:0
-moving 1628 h units to 13
-presure 3.025e+07 for i:1
-moving -833.3 h units to 14
-presure 2.055e+07 for i:3
-moving 156.5 h units to 23
-presure 6.122e+06 for i:5
-moving 1628 h units to 33
-presure 3.025e+07 for i:6
-moving -833.3 h units to 34
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253    70.54        0    70.54     2253   
-  3167     1628        0     1628     3167   
-  4000     4000     4000     4000     4000   
+check point 13 0
+effective height at 0 2 1.798e+308
+effective height at 0 3 3149
+effective height at 0 4 4000
+effective height at 1 2 1.798e+308
+effective height at 1 4 1538
+effective height at 2 2 1.798e+308
+effective height at 2 3 4914
+effective height at 2 4 3010
+ave presur 0
 
-checking point 3 0 presure 3.92e+07
-presure 2.95e+07 for i:2
-moving -85.92 h units to 21
-presure 1.508e+07 for i:4
-moving 1386 h units to 31
-presure 3.086e+07 for i:6
-moving -224.5 h units to 40
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0    70.54     2253   
-  2091     3015        0     1628     3167   
-  3775     4000     4000     4000     4000   
+check point 14 4000
+effective height at 0 3 4000
+effective height at 0 4 3149
+effective height at 0 5 1.798e+308
+effective height at 1 3 1538
+effective height at 1 5 1.798e+308
+effective height at 2 3 3010
+effective height at 2 4 4914
+effective height at 2 5 1.798e+308
+ave presur 2924
 
-checking point 3 4 presure 3.92e+07
-presure 2.95e+07 for i:0
-moving -85.92 h units to 23
-presure 1.508e+07 for i:3
-moving 1386 h units to 33
-presure 3.086e+07 for i:6
-moving -224.5 h units to 44
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     3015        0     3015     2091   
-  3775     4000     4000     4000     3775   
+check point 20 4000
+effective height at 1 -1 1.798e+308
+effective height at 1 0 3086
+effective height at 1 1 624.7
+effective height at 2 -1 1.798e+308
+effective height at 2 1 2097
+effective height at 3 -1 1.798e+308
+effective height at 3 0 3086
+effective height at 3 1 624.7
+ave presur 2253
 
-checking point 4 0 presure 3.92e+07
-presure 2.342e+07 for i:2
-moving 805.3 h units to 31
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     3820        0     3015     2091   
-  2970     4000     4000     4000     3775   
+check point 21 0
+effective height at 1 0 1.798e+308
+effective height at 1 1 3086
+effective height at 1 2 624.7
+effective height at 2 0 1.798e+308
+effective height at 2 2 2097
+effective height at 3 0 1.798e+308
+effective height at 3 1 3086
+effective height at 3 2 624.7
+ave presur 0
 
-checking point 4 1 presure 3.92e+07
-presure 1.508e+07 for i:1
-moving 1386 h units to 31
-presure 2.95e+07 for i:2
-moving -85.92 h units to 32
-presure 3.086e+07 for i:3
-moving -224.5 h units to 40
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     5206   -85.92     3015     2091   
-  2746     2924     4000     4000     3775   
+check point 22 0
+effective height at 1 1 1.798e+308
+effective height at 1 2 3086
+effective height at 1 3 624.7
+effective height at 2 1 1.798e+308
+effective height at 2 3 2097
+effective height at 3 1 1.798e+308
+effective height at 3 2 3086
+effective height at 3 3 624.7
+ave presur 0
 
-checking point 4 2 presure 3.92e+07
-presure 6.122e+06 for i:0
-moving 1628 h units to 31
-presure 2.055e+07 for i:1
-moving 156.5 h units to 32
-presure 6.122e+06 for i:2
-moving 1628 h units to 33
-presure 3.025e+07 for i:3
-moving -833.3 h units to 41
-presure 3.025e+07 for i:4
-moving -833.3 h units to 43
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834    70.54     4643     2091   
-  2746     2091     2253     3167     3775   
+check point 23 0
+effective height at 1 2 1.798e+308
+effective height at 1 3 3086
+effective height at 1 4 624.7
+effective height at 2 2 1.798e+308
+effective height at 2 4 2097
+effective height at 3 2 1.798e+308
+effective height at 3 3 3086
+effective height at 3 4 624.7
+ave presur 0
 
-checking point 4 3 presure 3.92e+07
-presure 2.95e+07 for i:0
-moving -85.92 h units to 32
-presure 1.508e+07 for i:1
-moving 1386 h units to 33
-presure 3.086e+07 for i:4
-moving -224.5 h units to 44
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6029     2091   
-  2746     2091     2253     2091     3551   
+check point 24 4000
+effective height at 1 3 624.7
+effective height at 1 4 3086
+effective height at 1 5 1.798e+308
+effective height at 2 3 2097
+effective height at 2 5 1.798e+308
+effective height at 3 3 624.7
+effective height at 3 4 3086
+effective height at 3 5 1.798e+308
+ave presur 2253
 
-checking point 4 4 presure 3.92e+07
-presure 2.342e+07 for i:0
-moving 805.3 h units to 33
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 30 4000
+effective height at 2 -1 1.798e+308
+effective height at 2 0 4914
+effective height at 2 1 3010
+effective height at 3 -1 1.798e+308
+effective height at 3 1 1538
+effective height at 4 -1 1.798e+308
+effective height at 4 0 3149
+effective height at 4 1 4000
+ave presur 2924
+
+check point 31 0
+effective height at 2 0 1.798e+308
+effective height at 2 1 4914
+effective height at 2 2 3010
+effective height at 3 0 1.798e+308
+effective height at 3 2 1538
+effective height at 4 0 1.798e+308
+effective height at 4 1 3149
+effective height at 4 2 4000
+ave presur 0
+
+check point 32 0
+effective height at 2 1 1.798e+308
+effective height at 2 2 4914
+effective height at 2 3 3010
+effective height at 3 1 1.798e+308
+effective height at 3 3 1538
+effective height at 4 1 1.798e+308
+effective height at 4 2 3149
+effective height at 4 3 4000
+ave presur 0
+
+check point 33 0
+effective height at 2 2 1.798e+308
+effective height at 2 3 4914
+effective height at 2 4 3010
+effective height at 3 2 1.798e+308
+effective height at 3 4 1538
+effective height at 4 2 1.798e+308
+effective height at 4 3 3149
+effective height at 4 4 4000
+ave presur 0
+
+check point 34 4000
+effective height at 2 3 3010
+effective height at 2 4 4914
+effective height at 2 5 1.798e+308
+effective height at 3 3 1538
+effective height at 3 5 1.798e+308
+effective height at 4 3 4000
+effective height at 4 4 3149
+effective height at 4 5 1.798e+308
+ave presur 2924
+
+check point 40 4000
+effective height at 3 -1 1.798e+308
+effective height at 3 0 4851
+effective height at 3 1 2389
+effective height at 4 -1 1.798e+308
+effective height at 4 1 4851
+effective height at 5 -1 1.798e+308
+effective height at 5 0 1.798e+308
+effective height at 5 1 1.798e+308
+ave presur 3195
+
+check point 41 4000
+effective height at 3 0 4000
+effective height at 3 1 1538
+effective height at 3 2 3010
+effective height at 4 0 3149
+effective height at 4 2 4914
+effective height at 5 0 1.798e+308
+effective height at 5 1 1.798e+308
+effective height at 5 2 1.798e+308
+ave presur 2924
+
+check point 42 4000
+effective height at 3 1 624.7
+effective height at 3 2 2097
+effective height at 3 3 624.7
+effective height at 4 1 3086
+effective height at 4 3 3086
+effective height at 5 1 1.798e+308
+effective height at 5 2 1.798e+308
+effective height at 5 3 1.798e+308
+ave presur 2253
+
+check point 43 4000
+effective height at 3 2 3010
+effective height at 3 3 1538
+effective height at 3 4 4000
+effective height at 4 2 4914
+effective height at 4 4 3149
+effective height at 5 2 1.798e+308
+effective height at 5 3 1.798e+308
+effective height at 5 4 1.798e+308
+ave presur 2924
+
+check point 44 4000
+effective height at 3 3 2389
+effective height at 3 4 4851
+effective height at 3 5 1.798e+308
+effective height at 4 3 4851
+effective height at 4 5 1.798e+308
+effective height at 5 3 1.798e+308
+effective height at 5 4 1.798e+308
+effective height at 5 5 1.798e+308
+ave presur 3195
 
 water height
-    2746       2091       2253       2091       2746   
-    2091       6834     -15.38       6834       2091   
-    2253     -15.38          0     -15.38       2253   
-    2091       6834     -15.38       6834       2091   
-    2746       2091       2253       2091       2746   
+    4000       4000       4000       4000       4000   
+    4000          0          0          0       4000   
+    4000          0          0          0       4000   
+    4000          0          0          0       4000   
+    4000       4000       4000       4000       4000   
 Total water in system: 6.4e+04
 
 terain height
@@ -253,256 +320,287 @@ terain height
 
 iteration
 
-checking point 0 0 presure 2.691e+07
-  2746     2091     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 00 4000
+effective height at -1 -1 1.798e+308
+effective height at -1 0 1.798e+308
+effective height at -1 1 1.798e+308
+effective height at 0 -1 1.798e+308
+effective height at 0 1 4851
+effective height at 1 -1 1.798e+308
+effective height at 1 0 4851
+effective height at 1 1 2389
+ave presur 3195
 
-checking point 0 1 presure 2.049e+07
-presure 1.857e+07 for i:3
-moving 98.29 h units to 00
-  2844     1993     2253     2091     2746   
-  2091     6834   -15.38     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 01 4000
+effective height at -1 0 1.798e+308
+effective height at -1 1 1.798e+308
+effective height at -1 2 1.798e+308
+effective height at 0 0 3149
+effective height at 0 2 4914
+effective height at 1 0 4000
+effective height at 1 1 1538
+effective height at 1 2 3010
+ave presur 2924
 
-checking point 0 2 presure 2.208e+07
-presure 1.154e+07 for i:3
-moving 494.9 h units to 01
-presure 1.154e+07 for i:4
-moving 494.9 h units to 03
-presure 2.04e+07 for i:6
-moving -408.9 h units to 12
-  2844     2488     1672     2586     2746   
-  2091     6834   -424.3     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 02 4000
+effective height at -1 1 1.798e+308
+effective height at -1 2 1.798e+308
+effective height at -1 3 1.798e+308
+effective height at 0 1 3086
+effective height at 0 3 3086
+effective height at 1 1 624.7
+effective height at 1 2 2097
+effective height at 1 3 624.7
+ave presur 2253
 
-checking point 0 3 presure 2.049e+07
-presure 1.857e+07 for i:4
-moving 98.29 h units to 04
-  2844     2488     1672     2488     2844   
-  2091     6834   -424.3     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 03 4000
+effective height at -1 2 1.798e+308
+effective height at -1 3 1.798e+308
+effective height at -1 4 1.798e+308
+effective height at 0 2 4914
+effective height at 0 4 3149
+effective height at 1 2 3010
+effective height at 1 3 1538
+effective height at 1 4 4000
+ave presur 2924
 
-checking point 0 4 presure 2.691e+07
-  2844     2488     1672     2488     2844   
-  2091     6834   -424.3     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 04 4000
+effective height at -1 3 1.798e+308
+effective height at -1 4 1.798e+308
+effective height at -1 5 1.798e+308
+effective height at 0 3 4851
+effective height at 0 5 1.798e+308
+effective height at 1 3 2389
+effective height at 1 4 4851
+effective height at 1 5 1.798e+308
+ave presur 3195
 
-checking point 1 0 presure 2.049e+07
-presure 1.857e+07 for i:1
-moving 98.29 h units to 00
-  2942     2488     1672     2488     2844   
-  1993     6834   -424.3     6834     2091   
-  2253   -15.38        0   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 10 4000
+effective height at 0 -1 1.798e+308
+effective height at 0 0 3149
+effective height at 0 1 4000
+effective height at 1 -1 1.798e+308
+effective height at 1 1 1538
+effective height at 2 -1 1.798e+308
+effective height at 2 0 4914
+effective height at 2 1 3010
+ave presur 2924
 
-checking point 1 1 presure 6.698e+07
-presure 3.491e+06 for i:0
-moving 1652 h units to 00
-presure 5.418e+06 for i:1
-moving 1456 h units to 01
-presure 1.596e+07 for i:2
-moving 380.1 h units to 02
-presure 5.418e+06 for i:3
-moving 1456 h units to 10
-presure 1.427e+07 for i:4
-moving 551.9 h units to 12
-presure 1.596e+07 for i:5
-moving 380.1 h units to 20
-presure 1.427e+07 for i:6
-moving 551.9 h units to 21
-presure 3.538e+07 for i:7
-moving -1602 h units to 22
-  4595     3943     2052     2488     2844   
-  3449     2009    127.6     6834     2091   
-  2633    536.6    -1602   -15.38     2253   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 11 0
+effective height at 0 0 1.798e+308
+effective height at 0 1 3149
+effective height at 0 2 4000
+effective height at 1 0 1.798e+308
+effective height at 1 2 1538
+effective height at 2 0 1.798e+308
+effective height at 2 1 4914
+effective height at 2 2 3010
+ave presur 0
 
-checking point 1 3 presure 6.698e+07
-presure 1.596e+07 for i:0
-moving 380.1 h units to 02
-presure 5.418e+06 for i:1
-moving 1456 h units to 03
-presure 3.491e+06 for i:2
-moving 1652 h units to 04
-presure 1.427e+07 for i:3
-moving 551.9 h units to 12
-presure 5.418e+06 for i:4
-moving 1456 h units to 14
-presure 3.538e+07 for i:5
-moving -1602 h units to 22
-presure 1.427e+07 for i:6
-moving 551.9 h units to 23
-presure 1.596e+07 for i:7
-moving 380.1 h units to 24
-  4595     3943     2433     3943     4496   
-  3449     2009    679.6     2009     3547   
-  2633    536.6    -3204    536.6     2633   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 12 0
+effective height at 0 1 1.798e+308
+effective height at 0 2 3149
+effective height at 0 3 4000
+effective height at 1 1 1.798e+308
+effective height at 1 3 1538
+effective height at 2 1 1.798e+308
+effective height at 2 2 4914
+effective height at 2 3 3010
+ave presur 0
 
-checking point 1 4 presure 2.049e+07
-presure 1.857e+07 for i:1
-moving 98.29 h units to 04
-  4595     3943     2433     3943     4595   
-  3449     2009    679.6     2009     3449   
-  2633    536.6    -3204    536.6     2633   
-  2091     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 13 0
+effective height at 0 2 1.798e+308
+effective height at 0 3 3149
+effective height at 0 4 4000
+effective height at 1 2 1.798e+308
+effective height at 1 4 1538
+effective height at 2 2 1.798e+308
+effective height at 2 3 4914
+effective height at 2 4 3010
+ave presur 0
 
-checking point 2 0 presure 2.208e+07
-presure 1.154e+07 for i:1
-moving 494.9 h units to 10
-presure 2.04e+07 for i:4
-moving -408.9 h units to 21
-presure 1.154e+07 for i:6
-moving 494.9 h units to 30
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3449   
-  2052    127.6    -3204    536.6     2633   
-  2586     6834   -15.38     6834     2091   
-  2746     2091     2253     2091     2746   
+check point 14 4000
+effective height at 0 3 4000
+effective height at 0 4 3149
+effective height at 0 5 1.798e+308
+effective height at 1 3 1538
+effective height at 1 5 1.798e+308
+effective height at 2 3 3010
+effective height at 2 4 4914
+effective height at 2 5 1.798e+308
+ave presur 2924
 
-checking point 2 4 presure 2.208e+07
-presure 1.154e+07 for i:1
-moving 494.9 h units to 14
-presure 2.04e+07 for i:3
-moving -408.9 h units to 23
-presure 1.154e+07 for i:6
-moving 494.9 h units to 34
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2052    127.6    -3204    127.6     2052   
-  2586     6834   -15.38     6834     2586   
-  2746     2091     2253     2091     2746   
+check point 20 4000
+effective height at 1 -1 1.798e+308
+effective height at 1 0 3086
+effective height at 1 1 624.7
+effective height at 2 -1 1.798e+308
+effective height at 2 1 2097
+effective height at 3 -1 1.798e+308
+effective height at 3 0 3086
+effective height at 3 1 624.7
+ave presur 2253
 
-checking point 3 0 presure 2.049e+07
-presure 1.857e+07 for i:6
-moving 98.29 h units to 40
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2052    127.6    -3204    127.6     2052   
-  2488     6834   -15.38     6834     2586   
-  2844     2091     2253     2091     2746   
+check point 21 0
+effective height at 1 0 1.798e+308
+effective height at 1 1 3086
+effective height at 1 2 624.7
+effective height at 2 0 1.798e+308
+effective height at 2 2 2097
+effective height at 3 0 1.798e+308
+effective height at 3 1 3086
+effective height at 3 2 624.7
+ave presur 0
 
-checking point 3 1 presure 6.698e+07
-presure 1.596e+07 for i:0
-moving 380.1 h units to 20
-presure 1.427e+07 for i:1
-moving 551.9 h units to 21
-presure 3.538e+07 for i:2
-moving -1602 h units to 22
-presure 5.418e+06 for i:3
-moving 1456 h units to 30
-presure 1.427e+07 for i:4
-moving 551.9 h units to 32
-presure 3.491e+06 for i:5
-moving 1652 h units to 40
-presure 5.418e+06 for i:6
-moving 1456 h units to 41
-presure 1.596e+07 for i:7
-moving 380.1 h units to 42
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -4806    127.6     2052   
-  3943     2009    536.6     6834     2586   
-  4496     3547     2633     2091     2746   
+check point 22 0
+effective height at 1 1 1.798e+308
+effective height at 1 2 3086
+effective height at 1 3 624.7
+effective height at 2 1 1.798e+308
+effective height at 2 3 2097
+effective height at 3 1 1.798e+308
+effective height at 3 2 3086
+effective height at 3 3 624.7
+ave presur 0
 
-checking point 3 3 presure 6.698e+07
-presure 3.538e+07 for i:0
-moving -1602 h units to 22
-presure 1.427e+07 for i:1
-moving 551.9 h units to 23
-presure 1.596e+07 for i:2
-moving 380.1 h units to 24
-presure 1.427e+07 for i:3
-moving 551.9 h units to 32
-presure 5.418e+06 for i:4
-moving 1456 h units to 34
-presure 1.596e+07 for i:5
-moving 380.1 h units to 42
-presure 5.418e+06 for i:6
-moving 1456 h units to 43
-presure 3.491e+06 for i:7
-moving 1652 h units to 44
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009     1089     2009     4042   
-  4496     3547     3013     3547     4398   
+check point 23 0
+effective height at 1 2 1.798e+308
+effective height at 1 3 3086
+effective height at 1 4 624.7
+effective height at 2 2 1.798e+308
+effective height at 2 4 2097
+effective height at 3 2 1.798e+308
+effective height at 3 3 3086
+effective height at 3 4 624.7
+ave presur 0
 
-checking point 3 4 presure 2.049e+07
-presure 1.857e+07 for i:6
-moving 98.29 h units to 44
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009     1089     2009     3943   
-  4496     3547     3013     3547     4496   
+check point 24 4000
+effective height at 1 3 624.7
+effective height at 1 4 3086
+effective height at 1 5 1.798e+308
+effective height at 2 3 2097
+effective height at 2 5 1.798e+308
+effective height at 3 3 624.7
+effective height at 3 4 3086
+effective height at 3 5 1.798e+308
+ave presur 2253
 
-checking point 4 0 presure 2.691e+07
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009     1089     2009     3943   
-  4496     3547     3013     3547     4496   
+check point 30 4000
+effective height at 2 -1 1.798e+308
+effective height at 2 0 4914
+effective height at 2 1 3010
+effective height at 3 -1 1.798e+308
+effective height at 3 1 1538
+effective height at 4 -1 1.798e+308
+effective height at 4 0 3149
+effective height at 4 1 4000
+ave presur 2924
 
-checking point 4 1 presure 2.049e+07
-presure 1.857e+07 for i:3
-moving 98.29 h units to 40
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009     1089     2009     3943   
-  4595     3449     3013     3547     4496   
+check point 31 0
+effective height at 2 0 1.798e+308
+effective height at 2 1 4914
+effective height at 2 2 3010
+effective height at 3 0 1.798e+308
+effective height at 3 2 1538
+effective height at 4 0 1.798e+308
+effective height at 4 1 3149
+effective height at 4 2 4000
+ave presur 0
 
-checking point 4 2 presure 2.208e+07
-presure 2.04e+07 for i:1
-moving -408.9 h units to 32
-presure 1.154e+07 for i:3
-moving 494.9 h units to 41
-presure 1.154e+07 for i:4
-moving 494.9 h units to 43
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     4042     4496   
+check point 32 0
+effective height at 2 1 1.798e+308
+effective height at 2 2 4914
+effective height at 2 3 3010
+effective height at 3 1 1.798e+308
+effective height at 3 3 1538
+effective height at 4 1 1.798e+308
+effective height at 4 2 3149
+effective height at 4 3 4000
+ave presur 0
 
-checking point 4 3 presure 2.049e+07
-presure 1.857e+07 for i:4
-moving 98.29 h units to 44
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 33 0
+effective height at 2 2 1.798e+308
+effective height at 2 3 4914
+effective height at 2 4 3010
+effective height at 3 2 1.798e+308
+effective height at 3 4 1538
+effective height at 4 2 1.798e+308
+effective height at 4 3 3149
+effective height at 4 4 4000
+ave presur 0
 
-checking point 4 4 presure 2.691e+07
-  4595     3943     2433     3943     4595   
-  3943     2009    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 34 4000
+effective height at 2 3 3010
+effective height at 2 4 4914
+effective height at 2 5 1.798e+308
+effective height at 3 3 1538
+effective height at 3 5 1.798e+308
+effective height at 4 3 4000
+effective height at 4 4 3149
+effective height at 4 5 1.798e+308
+ave presur 2924
+
+check point 40 4000
+effective height at 3 -1 1.798e+308
+effective height at 3 0 4851
+effective height at 3 1 2389
+effective height at 4 -1 1.798e+308
+effective height at 4 1 4851
+effective height at 5 -1 1.798e+308
+effective height at 5 0 1.798e+308
+effective height at 5 1 1.798e+308
+ave presur 3195
+
+check point 41 4000
+effective height at 3 0 4000
+effective height at 3 1 1538
+effective height at 3 2 3010
+effective height at 4 0 3149
+effective height at 4 2 4914
+effective height at 5 0 1.798e+308
+effective height at 5 1 1.798e+308
+effective height at 5 2 1.798e+308
+ave presur 2924
+
+check point 42 4000
+effective height at 3 1 624.7
+effective height at 3 2 2097
+effective height at 3 3 624.7
+effective height at 4 1 3086
+effective height at 4 3 3086
+effective height at 5 1 1.798e+308
+effective height at 5 2 1.798e+308
+effective height at 5 3 1.798e+308
+ave presur 2253
+
+check point 43 4000
+effective height at 3 2 3010
+effective height at 3 3 1538
+effective height at 3 4 4000
+effective height at 4 2 4914
+effective height at 4 4 3149
+effective height at 5 2 1.798e+308
+effective height at 5 3 1.798e+308
+effective height at 5 4 1.798e+308
+ave presur 2924
+
+check point 44 4000
+effective height at 3 3 2389
+effective height at 3 4 4851
+effective height at 3 5 1.798e+308
+effective height at 4 3 4851
+effective height at 4 5 1.798e+308
+effective height at 5 3 1.798e+308
+effective height at 5 4 1.798e+308
+effective height at 5 5 1.798e+308
+ave presur 3195
 
 water height
-    4595       3943       2433       3943       4595   
-    3943       2009      679.6       2009       3943   
-    2433      679.6      -6408      679.6       2433   
-    3943       2009      679.6       2009       3943   
-    4595       3943       2433       3943       4595   
+    4000       4000       4000       4000       4000   
+    4000          0          0          0       4000   
+    4000          0          0          0       4000   
+    4000          0          0          0       4000   
+    4000       4000       4000       4000       4000   
 Total water in system: 6.4e+04
 
 terain height
@@ -515,308 +613,287 @@ terain height
 
 iteration
 
-checking point 0 0 presure 4.503e+07
-presure 4.31e+07 for i:7
-moving 98.29 h units to 11
-  4496     3943     2433     3943     4595   
-  3943     2107    679.6     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 00 4000
+effective height at -1 -1 1.798e+308
+effective height at -1 0 1.798e+308
+effective height at -1 1 1.798e+308
+effective height at 0 -1 1.798e+308
+effective height at 0 1 4851
+effective height at 1 -1 1.798e+308
+effective height at 1 0 4851
+effective height at 1 1 2389
+ave presur 3195
 
-checking point 0 1 presure 3.865e+07
-presure 3.669e+07 for i:3
-moving -89.49 h units to 00
-presure 3.279e+07 for i:4
-moving 307.8 h units to 02
-presure 3.476e+07 for i:6
-moving 107.1 h units to 11
-presure 3.616e+07 for i:7
-moving -35.91 h units to 12
-  4407     3654     2740     3943     4595   
-  3943     2214    643.7     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 01 4000
+effective height at -1 0 1.798e+308
+effective height at -1 1 1.798e+308
+effective height at -1 2 1.798e+308
+effective height at 0 0 3149
+effective height at 0 2 4914
+effective height at 1 0 4000
+effective height at 1 1 1538
+effective height at 1 2 3010
+ave presur 2924
 
-checking point 0 2 presure 2.384e+07
-  4407     3654     2740     3943     4595   
-  3943     2214    643.7     2009     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 02 4000
+effective height at -1 1 1.798e+308
+effective height at -1 2 1.798e+308
+effective height at -1 3 1.798e+308
+effective height at 0 1 3086
+effective height at 0 3 3086
+effective height at 1 1 624.7
+effective height at 1 2 2097
+effective height at 1 3 624.7
+ave presur 2253
 
-checking point 0 3 presure 3.865e+07
-presure 3.279e+07 for i:3
-moving 307.8 h units to 02
-presure 3.669e+07 for i:4
-moving -89.49 h units to 04
-presure 3.616e+07 for i:5
-moving -35.91 h units to 12
-presure 3.476e+07 for i:6
-moving 107.1 h units to 13
-  4407     3654     3048     3654     4505   
-  3943     2214    607.8     2116     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 03 4000
+effective height at -1 2 1.798e+308
+effective height at -1 3 1.798e+308
+effective height at -1 4 1.798e+308
+effective height at 0 2 4914
+effective height at 0 4 3149
+effective height at 1 2 3010
+effective height at 1 3 1538
+effective height at 1 4 4000
+ave presur 2924
 
-checking point 0 4 presure 4.503e+07
-presure 4.31e+07 for i:5
-moving 98.29 h units to 13
-  4407     3654     3048     3654     4407   
-  3943     2214    607.8     2214     3943   
-  2433    679.6    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 04 4000
+effective height at -1 3 1.798e+308
+effective height at -1 4 1.798e+308
+effective height at -1 5 1.798e+308
+effective height at 0 3 4851
+effective height at 0 5 1.798e+308
+effective height at 1 3 2389
+effective height at 1 4 4851
+effective height at 1 5 1.798e+308
+ave presur 3195
 
-checking point 1 0 presure 3.865e+07
-presure 3.669e+07 for i:1
-moving -89.49 h units to 00
-presure 3.476e+07 for i:4
-moving 107.1 h units to 11
-presure 3.279e+07 for i:6
-moving 307.8 h units to 20
-presure 3.616e+07 for i:7
-moving -35.91 h units to 21
-  4317     3654     3048     3654     4407   
-  3654     2321    607.8     2214     3943   
-  2740    643.7    -6408    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 10 4000
+effective height at 0 -1 1.798e+308
+effective height at 0 0 3149
+effective height at 0 1 4000
+effective height at 1 -1 1.798e+308
+effective height at 1 1 1538
+effective height at 2 -1 1.798e+308
+effective height at 2 0 4914
+effective height at 2 1 3010
+ave presur 2924
 
-checking point 1 1 presure 1.968e+07
-presure 1.772e+07 for i:2
-moving -401.8 h units to 02
-presure 1.772e+07 for i:5
-moving -401.8 h units to 20
-presure 0 for i:7
-moving 1406 h units to 22
-  4317     3654     2646     3654     4407   
-  3654     1719    607.8     2214     3943   
-  2339    643.7    -5002    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 11 0
+effective height at 0 0 1.798e+308
+effective height at 0 1 3149
+effective height at 0 2 4000
+effective height at 1 0 1.798e+308
+effective height at 1 2 1538
+effective height at 2 0 1.798e+308
+effective height at 2 1 4914
+effective height at 2 2 3010
+ave presur 0
 
-checking point 1 2 presure 6.66e+06
-presure 3.292e+06 for i:1
-moving 81.83 h units to 02
-presure 5.258e+06 for i:3
-moving -118.8 h units to 11
-presure 5.258e+06 for i:4
-moving -118.8 h units to 13
-presure 0 for i:6
-moving 417.7 h units to 22
-  4317     3654     2728     3654     4407   
-  3654     1600    345.9     2095     3943   
-  2339    643.7    -4584    679.6     2433   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 12 0
+effective height at 0 1 1.798e+308
+effective height at 0 2 3149
+effective height at 0 3 4000
+effective height at 1 1 1.798e+308
+effective height at 1 3 1538
+effective height at 2 1 1.798e+308
+effective height at 2 2 4914
+effective height at 2 3 3010
+ave presur 0
 
-checking point 1 3 presure 1.968e+07
-presure 1.772e+07 for i:0
-moving -401.8 h units to 02
-presure 0 for i:5
-moving 1406 h units to 22
-presure 1.772e+07 for i:7
-moving -401.8 h units to 24
-  4317     3654     2326     3654     4407   
-  3654     1600    345.9     1493     3943   
-  2339    643.7    -3178    679.6     2031   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 13 0
+effective height at 0 2 1.798e+308
+effective height at 0 3 3149
+effective height at 0 4 4000
+effective height at 1 2 1.798e+308
+effective height at 1 4 1538
+effective height at 2 2 1.798e+308
+effective height at 2 3 4914
+effective height at 2 4 3010
+ave presur 0
 
-checking point 1 4 presure 3.865e+07
-presure 3.669e+07 for i:1
-moving -89.49 h units to 04
-presure 3.476e+07 for i:3
-moving 107.1 h units to 13
-presure 3.616e+07 for i:5
-moving -35.91 h units to 23
-presure 3.279e+07 for i:6
-moving 307.8 h units to 24
-  4317     3654     2326     3654     4317   
-  3654     1600    345.9     1600     3654   
-  2339    643.7    -3178    643.7     2339   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 14 4000
+effective height at 0 3 4000
+effective height at 0 4 3149
+effective height at 0 5 1.798e+308
+effective height at 1 3 1538
+effective height at 1 5 1.798e+308
+effective height at 2 3 3010
+effective height at 2 4 4914
+effective height at 2 5 1.798e+308
+ave presur 2924
 
-checking point 2 0 presure 2.384e+07
-  4317     3654     2326     3654     4317   
-  3654     1600    345.9     1600     3654   
-  2339    643.7    -3178    643.7     2339   
-  3943     2009    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 20 4000
+effective height at 1 -1 1.798e+308
+effective height at 1 0 3086
+effective height at 1 1 624.7
+effective height at 2 -1 1.798e+308
+effective height at 2 1 2097
+effective height at 3 -1 1.798e+308
+effective height at 3 0 3086
+effective height at 3 1 624.7
+ave presur 2253
 
-checking point 2 1 presure 6.66e+06
-presure 5.258e+06 for i:1
-moving -118.8 h units to 11
-presure 3.292e+06 for i:3
-moving 81.83 h units to 20
-presure 0 for i:4
-moving 417.7 h units to 22
-presure 5.258e+06 for i:6
-moving -118.8 h units to 31
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1600     3654   
-  2420    381.8    -2761    643.7     2339   
-  3943     1890    679.6     2009     3943   
-  4595     3943     2433     3943     4595   
+check point 21 0
+effective height at 1 0 1.798e+308
+effective height at 1 1 3086
+effective height at 1 2 624.7
+effective height at 2 0 1.798e+308
+effective height at 2 2 2097
+effective height at 3 0 1.798e+308
+effective height at 3 1 3086
+effective height at 3 2 624.7
+ave presur 0
 
-checking point 2 3 presure 6.66e+06
-presure 5.258e+06 for i:1
-moving -118.8 h units to 13
-presure 0 for i:3
-moving 417.7 h units to 22
-presure 3.292e+06 for i:4
-moving 81.83 h units to 24
-presure 5.258e+06 for i:6
-moving -118.8 h units to 33
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2420    381.8    -2343    381.8     2420   
-  3943     1890    679.6     1890     3943   
-  4595     3943     2433     3943     4595   
+check point 22 0
+effective height at 1 1 1.798e+308
+effective height at 1 2 3086
+effective height at 1 3 624.7
+effective height at 2 1 1.798e+308
+effective height at 2 3 2097
+effective height at 3 1 1.798e+308
+effective height at 3 2 3086
+effective height at 3 3 624.7
+ave presur 0
 
-checking point 2 4 presure 2.384e+07
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2420    381.8    -2343    381.8     2420   
-  3943     1890    679.6     1890     3943   
-  4595     3943     2433     3943     4595   
+check point 23 0
+effective height at 1 2 1.798e+308
+effective height at 1 3 3086
+effective height at 1 4 624.7
+effective height at 2 2 1.798e+308
+effective height at 2 4 2097
+effective height at 3 2 1.798e+308
+effective height at 3 3 3086
+effective height at 3 4 624.7
+ave presur 0
 
-checking point 3 0 presure 3.865e+07
-presure 3.279e+07 for i:1
-moving 307.8 h units to 20
-presure 3.616e+07 for i:2
-moving -35.91 h units to 21
-presure 3.476e+07 for i:4
-moving 107.1 h units to 31
-presure 3.669e+07 for i:6
-moving -89.49 h units to 40
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2728    345.9    -2343    381.8     2420   
-  3654     1997    679.6     1890     3943   
-  4505     3943     2433     3943     4595   
+check point 24 4000
+effective height at 1 3 624.7
+effective height at 1 4 3086
+effective height at 1 5 1.798e+308
+effective height at 2 3 2097
+effective height at 2 5 1.798e+308
+effective height at 3 3 624.7
+effective height at 3 4 3086
+effective height at 3 5 1.798e+308
+ave presur 2253
 
-checking point 3 1 presure 1.968e+07
-presure 1.772e+07 for i:0
-moving -401.8 h units to 20
-presure 0 for i:2
-moving 1406 h units to 22
-presure 1.772e+07 for i:7
-moving -401.8 h units to 42
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9   -936.8    381.8     2420   
-  3654     1394    679.6     1890     3943   
-  4505     3943     2031     3943     4595   
+check point 30 4000
+effective height at 2 -1 1.798e+308
+effective height at 2 0 4914
+effective height at 2 1 3010
+effective height at 3 -1 1.798e+308
+effective height at 3 1 1538
+effective height at 4 -1 1.798e+308
+effective height at 4 0 3149
+effective height at 4 1 4000
+ave presur 2924
 
-checking point 3 2 presure 6.66e+06
-presure 0 for i:1
-moving 417.7 h units to 22
-presure 5.258e+06 for i:3
-moving -118.8 h units to 31
-presure 5.258e+06 for i:4
-moving -118.8 h units to 33
-presure 3.292e+06 for i:6
-moving 81.83 h units to 42
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9   -519.1    381.8     2420   
-  3654     1275    417.7     1771     3943   
-  4505     3943     2113     3943     4595   
+check point 31 0
+effective height at 2 0 1.798e+308
+effective height at 2 1 4914
+effective height at 2 2 3010
+effective height at 3 0 1.798e+308
+effective height at 3 2 1538
+effective height at 4 0 1.798e+308
+effective height at 4 1 3149
+effective height at 4 2 4000
+ave presur 0
 
-checking point 3 3 presure 1.968e+07
-presure 0 for i:0
-moving 1406 h units to 22
-presure 1.772e+07 for i:2
-moving -401.8 h units to 24
-presure 1.772e+07 for i:5
-moving -401.8 h units to 42
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    381.8     2019   
-  3654     1275    417.7     1168     3943   
-  4505     3943     1711     3943     4595   
+check point 32 0
+effective height at 2 1 1.798e+308
+effective height at 2 2 4914
+effective height at 2 3 3010
+effective height at 3 1 1.798e+308
+effective height at 3 3 1538
+effective height at 4 1 1.798e+308
+effective height at 4 2 3149
+effective height at 4 3 4000
+ave presur 0
 
-checking point 3 4 presure 3.865e+07
-presure 3.616e+07 for i:0
-moving -35.91 h units to 23
-presure 3.279e+07 for i:1
-moving 307.8 h units to 24
-presure 3.476e+07 for i:3
-moving 107.1 h units to 33
-presure 3.669e+07 for i:6
-moving -89.49 h units to 44
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    345.9     2326   
-  3654     1275    417.7     1275     3654   
-  4505     3943     1711     3943     4505   
+check point 33 0
+effective height at 2 2 1.798e+308
+effective height at 2 3 4914
+effective height at 2 4 3010
+effective height at 3 2 1.798e+308
+effective height at 3 4 1538
+effective height at 4 2 1.798e+308
+effective height at 4 3 3149
+effective height at 4 4 4000
+ave presur 0
 
-checking point 4 0 presure 4.503e+07
-presure 4.31e+07 for i:2
-moving 98.29 h units to 31
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    345.9     2326   
-  3654     1374    417.7     1275     3654   
-  4407     3943     1711     3943     4505   
+check point 34 4000
+effective height at 2 3 3010
+effective height at 2 4 4914
+effective height at 2 5 1.798e+308
+effective height at 3 3 1538
+effective height at 3 5 1.798e+308
+effective height at 4 3 4000
+effective height at 4 4 3149
+effective height at 4 5 1.798e+308
+ave presur 2924
 
-checking point 4 1 presure 3.865e+07
-presure 3.476e+07 for i:1
-moving 107.1 h units to 31
-presure 3.616e+07 for i:2
-moving -35.91 h units to 32
-presure 3.669e+07 for i:3
-moving -89.49 h units to 40
-presure 3.279e+07 for i:4
-moving 307.8 h units to 42
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    345.9     2326   
-  3654     1481    381.8     1275     3654   
-  4317     3654     2019     3943     4505   
+check point 40 4000
+effective height at 3 -1 1.798e+308
+effective height at 3 0 4851
+effective height at 3 1 2389
+effective height at 4 -1 1.798e+308
+effective height at 4 1 4851
+effective height at 5 -1 1.798e+308
+effective height at 5 0 1.798e+308
+effective height at 5 1 1.798e+308
+ave presur 3195
 
-checking point 4 2 presure 2.384e+07
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    345.9     2326   
-  3654     1481    381.8     1275     3654   
-  4317     3654     2019     3943     4505   
+check point 41 4000
+effective height at 3 0 4000
+effective height at 3 1 1538
+effective height at 3 2 3010
+effective height at 4 0 3149
+effective height at 4 2 4914
+effective height at 5 0 1.798e+308
+effective height at 5 1 1.798e+308
+effective height at 5 2 1.798e+308
+ave presur 2924
 
-checking point 4 3 presure 3.865e+07
-presure 3.616e+07 for i:0
-moving -35.91 h units to 32
-presure 3.476e+07 for i:1
-moving 107.1 h units to 33
-presure 3.279e+07 for i:3
-moving 307.8 h units to 42
-presure 3.669e+07 for i:4
-moving -89.49 h units to 44
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    345.9     2326   
-  3654     1481    345.9     1383     3654   
-  4317     3654     2326     3654     4416   
+check point 42 4000
+effective height at 3 1 624.7
+effective height at 3 2 2097
+effective height at 3 3 624.7
+effective height at 4 1 3086
+effective height at 4 3 3086
+effective height at 5 1 1.798e+308
+effective height at 5 2 1.798e+308
+effective height at 5 3 1.798e+308
+ave presur 2253
 
-checking point 4 4 presure 4.503e+07
-presure 4.31e+07 for i:0
-moving 98.29 h units to 33
-  4317     3654     2326     3654     4317   
-  3654     1481    345.9     1481     3654   
-  2326    345.9      887    345.9     2326   
-  3654     1481    345.9     1481     3654   
-  4317     3654     2326     3654     4317   
+check point 43 4000
+effective height at 3 2 3010
+effective height at 3 3 1538
+effective height at 3 4 4000
+effective height at 4 2 4914
+effective height at 4 4 3149
+effective height at 5 2 1.798e+308
+effective height at 5 3 1.798e+308
+effective height at 5 4 1.798e+308
+ave presur 2924
+
+check point 44 4000
+effective height at 3 3 2389
+effective height at 3 4 4851
+effective height at 3 5 1.798e+308
+effective height at 4 3 4851
+effective height at 4 5 1.798e+308
+effective height at 5 3 1.798e+308
+effective height at 5 4 1.798e+308
+effective height at 5 5 1.798e+308
+ave presur 3195
 
 water height
-    4317       3654       2326       3654       4317   
-    3654       1481      345.9       1481       3654   
-    2326      345.9        887      345.9       2326   
-    3654       1481      345.9       1481       3654   
-    4317       3654       2326       3654       4317   
+    4000       4000       4000       4000       4000   
+    4000          0          0          0       4000   
+    4000          0          0          0       4000   
+    4000          0          0          0       4000   
+    4000       4000       4000       4000       4000   
 Total water in system: 6.4e+04
 
 terain height
