@@ -3,8 +3,8 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
-const int MAPX = 400;
-const int MAPY = 400;
+const int MAPX = 5;
+const int MAPY = 5;
 
 void split(const string &s, char delim, vector <string> &elems) {
     stringstream ss;
@@ -143,13 +143,12 @@ int main(int ac, char **av) {
 
         memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
 
-        //filemap.flood(4000);
-        //filemap.toString();
-        /*for (int q = 0; q < 3; q++) {
-            cout <<endl << endl<< "iteration" <<endl;
+        filemap.flood(1000);
+        filemap.toString();
+        //for (int q = 0; q < 3; q++) {
             filemap.flow();
-            filemap.toString();
-        }*/
+        filemap.toString();
+        //}
 
         int x = -1;
         while (++x < MAPX) {
@@ -176,16 +175,14 @@ int main(int ac, char **av) {
             }
             //if (h < 4000)
             //{
-                h += 1000;
-                filemap.flood(h);
+          //      h += 1000;
+            //    filemap.flood(h);
             //}
 
             SDL_RenderClear(sdl.render);
             SDL_RenderCopy(sdl.render, sdl.texture, NULL, NULL);
             SDL_RenderPresent(sdl.render);
-            filemap.flow();
-            filemap.flow();
-            filemap.flow();
+            //filemap.flow();
             int x = -1;
             while (++x < MAPX) {
                 int y = -1;

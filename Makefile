@@ -5,8 +5,8 @@ INC			=	-I includes $(SDL2I)
 LIBS		=	-lm $(SDL2L)
 CFLAGS		=	-Wall -Wextra -Werror -Wno-unused-result -Ofast -pthread $(INC)
 LFLAGS		=	-lpthread $(INC) $(LIBS)
-CC			=	g++ -std=c++11 -g3
-LD			=	g++ -std=c++11 -g3
+CC			=	g++ -pg -std=c++11 -g3 
+LD			=	g++ -pg -std=c++11 -g3 
 
 INCLUDE		=	$(shell find includes -name "*.h")
 SRC			=	$(shell find src -name "*.cpp")
@@ -17,7 +17,7 @@ all: mod1
 build/%.o: src/%.c $(INCLUDE)
 		@echo "\033[92m    CC    $@\033[0m"
 			@mkdir -p $(dir $@)
-				@$(CC) $(CFLAGS) -c $< -o $@
+				$(CC) $(CFLAGS) -c $< -o $@
 
 mod1: $(OBJ)
 		@echo "\033[92m    LD    $(NAME)\033[0m"
