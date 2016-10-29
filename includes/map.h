@@ -38,6 +38,7 @@ public:
     t_point *get_next(int x, int y);
     double  solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur);
     double  get_height(double pesure);
+    double  get_ave_alt(int x, int y);
 
 private:
     double      scalex;

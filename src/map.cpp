@@ -183,12 +183,10 @@ void map::toString() {
     while (++x < this->mapx) {
         y = -1;
         while (++y < this->mapy) {
-            cout.width(8);
+            cout.width(6);
             cout.precision(4);
-            cout << this->map_data[x][y].h << "   ";
+            cout << this->map_data[x][y].h << " ";
             water += this->map_data[x][y].h;
-            //printf("%05f ", this->map_data[x][y].h);
-            //fill_space(this->map_data[x][y].z);
         }
         cout << endl;
     }
@@ -198,10 +196,9 @@ void map::toString() {
     while (++x < this->mapx) {
         y = -1;
         while (++y < this->mapy) {
-            cout.width(8);
+            cout.width(6);
             cout.precision(4);
-            cout << this->map_data[x][y].z << "   ";
-            //fill_space(this->map_data[x][y].z);
+            cout << this->map_data[x][y].z << " ";
         }
         cout << endl;
     }
@@ -235,29 +232,6 @@ t_point *map::get_next(int x, int y) {
         return (NULL);
 }
 
-void map::flood(double h) {
-    int x = -1;
-    while (++x < this->mapx) {
-        double presure = get_presure(this->map_data[x][0].h);
-        double presur_in = 3 * (get_presure((h == 0) ? 0 : h + (0 - this->map_data[x][0].z)));
-        this->map_data[x][0].h += (presur_in > presure) ? h : 0;
-
-        presure = get_presure(this->map_data[x][this->mapy - 1].h);
-        presur_in = 3 * (get_presure((h == 0) ? 0 : h + (0 - this->map_data[x][this->mapy - 1].z)));
-        this->map_data[x][this->mapy - 1].h += (presur_in > presure) ? h : 0;
-    }
-    int y = 0;
-    while (++y < this->mapy - 1) {
-        double presure = get_presure(this->map_data[0][y].h);
-        double presur_in = 3 * (get_presure((h == 0) ? 0 : h + (0 - this->map_data[0][y].z)));
-        this->map_data[0][y].h += (presur_in > presure) ? h : 0;
-
-        presure = get_presure(this->map_data[this->mapx - 1][y].h);
-        presur_in = 3 * (get_presure((h == 0) ? 0 : h + (0 - this->map_data[this->mapx - 1][y].z)));
-        this->map_data[this->mapx - 1][y].h += (presur_in > presure) ? h : 0;
-    }
-}
-
 double map::solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur) {
     t_point *temp;
     double presur_in = 0;
@@ -267,15 +241,16 @@ double map::solve(t_point **map, int primx, int primy, int secondx, int secondy,
     temp = get_next(secondx, secondy);
     if (temp) {
         //return (get_presure(temp->h + (temp->z - map[primx][primy].z)));
-        if ((temp->h + (temp->z - map[primx][primy].z)) > 0)
+        /*if ((temp->h + (temp->z - map[primx][primy].z)) > 0)
             return (temp->h + (temp->z - map[primx][primy].z));
         else
-            return (0);
+            return (0);*/
+        return (temp->h + temp->z);
     }
     return (numeric_limits<double>::max());
 }
 
-bool sort_desc (int i,int j) { return (i>j); }
+bool sort_desc(int i, int j) { return (i > j); }
 
 double get_move_volume(double *external_presur, double internal_presure, int end) {
     double total = internal_presure;
@@ -284,18 +259,14 @@ double get_move_volume(double *external_presur, double internal_presure, int end
 
     sort(external_presur, external_presur + end, sort_desc);
     for (int i = 0; i < end; i++) {
-   //     cout << "adding " <<  external_presur[i]<< endl;
         total += external_presur[i];
         unit++;
 
     }
     ave = total / unit;
-   // cout << "init ave "<< ave << endl;
     int i = 0;
-    while (i < end)
-    {
-        if (external_presur[i] > ave)
-        {
+    while (i < end) {
+        if (external_presur[i] > ave) {
             total -= external_presur[i];
             unit--;
             ave = total / unit;
@@ -303,6 +274,59 @@ double get_move_volume(double *external_presur, double internal_presure, int end
         i++;
     }
     return (ave);
+}
+double split_move_volume(double *external_presur, double internal_presure, int end){
+    double total = internal_presure;
+    double unit = 0;
+    double ave;
+
+    sort(external_presur, external_presur + end, sort_desc);
+    for (int i = 0; i < end; i++) {
+        total += external_presur[i];
+        unit++;
+
+    }
+    ave = total / unit;
+    int i = 0;
+    while (i < end) {
+        if (external_presur[i] > ave) {
+            total -= external_presur[i];
+            unit--;
+            ave = total / unit;
+        }
+        i++;
+    }
+    return (ave);
+}
+
+double map::get_ave_alt(int x, int y) {
+    double ave = 0;
+    int count = 0;
+    t_point *temp;
+
+    for (int i = -1; i < 2; i++) {
+        temp = get_next(x - 1, y + i);
+        if (temp) {
+            count++;
+            ave += temp->z;
+        }
+        temp = get_next(x + 1, y + i);
+        if (temp) {
+            count++;
+            ave += temp->z;
+        }
+    }
+    temp = get_next(x , y + 1);
+    if (temp) {
+        count++;
+        ave += temp->z;
+    }
+    temp = get_next(x + 1, y - 1);
+    if (temp) {
+        count++;
+        ave += temp->z;
+    }
+    return (ave / count);
 }
 
 void map::flow() {
@@ -330,13 +354,12 @@ void map::flow() {
         while (++y < this->mapy) {
 
 
-
             deduct = 0;
             move = 0;
             count = 0;
-            presure = map_data[x][y].h;
+            presure = map_data[x][y].h + map_data[x][y].z;
             //cout<< endl << "checking  " << x << " " << y << " " << presure << endl;
-            if (presure > 0) {
+            if (map_data[x][y].h > 0) {
                 presures[0] = solve(map_data, x, y, x - 1, y - 1, presure);
                 presures[1] = solve(map_data, x, y, x - 1, y, presure);
                 presures[2] = solve(map_data, x, y, x - 1, y + 1, presure);
@@ -347,96 +370,126 @@ void map::flow() {
                 presures[5] = solve(map_data, x, y, x + 1, y - 1, presure);
                 presures[6] = solve(map_data, x, y, x + 1, y, presure);
                 presures[7] = solve(map_data, x, y, x + 1, y + 1, presure);
-            }
 
-            /*cout << "next " << x-1 << " " << y-1 << " "<< presures[0] << endl;
-            cout << "next " << x-1 << " " << y<< " " << presures[1] << endl;
-            cout << "next " << x-1 << " " << y+1<< " " << presures[2] << endl;
-            cout << "next " << x << " " << y-1<< " " << presures[3] << endl;
-            cout << "next " << x << " " << y+1<< " " << presures[4] << endl;
-            cout << "next " << x+1 << " " << y-1 << " "<< presures[5] << endl;
-            cout << "next " << x+1 << " " << y<< " " << presures[6] << endl;
-            cout << "next " << x+1 << " " << y+1 << " "<< presures[7] << endl;*/
 
-            double external_preures[8];
-            int end = 0;
-            for (int i = 0; i < 8; i++) {
-                if (presures[i] < presure) {
-                    external_preures[end] = presures[i];
-                    //cout << "use height " << presures[i] << endl;
-                    end++;
-                }
-            }
-            move = get_move_volume(external_preures, presure, end);
-            //cout << "av for " << x << " " << y << " is " << move << endl;
-            for (int i = 0; i < 8; i++) {
-                double moveheight = 0;
-                if (presures[i] < move) {
-                    moveheight = (move - presures[i]);
+                /*cout << "next " << x-1 << " " << y-1 << " "<< presures[0] << endl;
+                cout << "next " << x-1 << " " << y<< " " << presures[1] << endl;
+                cout << "next " << x-1 << " " << y+1<< " " << presures[2] << endl;
+                cout << "next " << x << " " << y-1<< " " << presures[3] << endl;
+                cout << "next " << x << " " << y+1<< " " << presures[4] << endl;
+                cout << "next " << x+1 << " " << y-1 << " "<< presures[5] << endl;
+                cout << "next " << x+1 << " " << y<< " " << presures[6] << endl;
+                cout << "next " << x+1 << " " << y+1 << " "<< presures[7] << endl;*/
 
-                    switch (i) {
-                        case 0:
-              //              cout << "moving " << moveheight << " to " << x-1 << " " << y-1 << endl;
-                            new_map_data[x - 1][y - 1].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 1:
-                //            cout << "moving " << moveheight << " to " << x-1 << " " << y << endl;
-                            new_map_data[x - 1][y].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 2:
-                //            cout << "moving " << moveheight << " to " << x-1 << " " << y+1 << endl;
-                            new_map_data[x - 1][y + 1].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 3:
-                //            cout << "moving " << moveheight << " to " << x << " " << y-1 << endl;
-                            new_map_data[x][y - 1].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 4:
-                //            cout << "moving " << moveheight << " to " << x << " " << y+1 << endl;
-                            new_map_data[x][y + 1].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 5:
-                //            cout << "moving " << moveheight << " to " << x+1 << " " << y-1 << endl;
-                            new_map_data[x + 1][y - 1].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 6:
-                //            cout << "moving " << moveheight << " to " << x+1 << " " << y << endl;
-                            new_map_data[x + 1][y].h += moveheight;
-                            deduct += moveheight;
-                            break;
-                        case 7:
-                //            cout << "moving " << moveheight << " to " << x+1 << " " << y+1 << endl;
-                            new_map_data[x + 1][y + 1].h += moveheight;
-                            deduct += moveheight;
-                            break;
+                double external_preures[8];
+                int end = 0;
+                for (int i = 0; i < 8; i++) {
+                    if (presures[i] < presure) {
+                        external_preures[end] = presures[i];
+                        //cout << "use height " << presures[i] << endl;
+                        end++;
                     }
                 }
-            }
-            new_map_data[x][y].h -= deduct;
-            if (new_map_data[x][y].h < 0)
-                new_map_data[x][y].h = 0;
-
-            /*double water = 0;
-            for(int j = 0; j < mapx; j++){
-                for (int k = 0; k < mapy ; ++k) {
-                    cout.width(8);
-                    cout.precision(4);
-                    cout << new_map_data[j][k].h << "   ";
-                    water += new_map_data[j][k].h;
+                move = get_move_volume(external_preures, presure, end);
+                if (move < map_data[x][y].z) {
+                    presure = map_data[x][y].h;
+                    move = split_move_volume(external_preures, presure, end);
                 }
-                cout << endl;
+                //move = round (move * 1000.0) / 1000.0;
+                //cout << "av for " << x << " " << y << " is " << move << endl;
+                for (int i = 0; i < 8; i++) {
+                    double moveheight = 0;
+                    if (presures[i] < move) {
+                        moveheight = (move - presures[i]);
+
+                        switch (i) {
+                            case 0:
+                                //              cout << "moving " << moveheight << " to " << x-1 << " " << y-1 << endl;
+                                new_map_data[x - 1][y - 1].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 1:
+                                //            cout << "moving " << moveheight << " to " << x-1 << " " << y << endl;
+                                new_map_data[x - 1][y].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 2:
+                                //            cout << "moving " << moveheight << " to " << x-1 << " " << y+1 << endl;
+                                new_map_data[x - 1][y + 1].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 3:
+                                //            cout << "moving " << moveheight << " to " << x << " " << y-1 << endl;
+                                new_map_data[x][y - 1].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 4:
+                                //            cout << "moving " << moveheight << " to " << x << " " << y+1 << endl;
+                                new_map_data[x][y + 1].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 5:
+                                //            cout << "moving " << moveheight << " to " << x+1 << " " << y-1 << endl;
+                                new_map_data[x + 1][y - 1].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 6:
+                                //            cout << "moving " << moveheight << " to " << x+1 << " " << y << endl;
+                                new_map_data[x + 1][y].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                            case 7:
+                                //            cout << "moving " << moveheight << " to " << x+1 << " " << y+1 << endl;
+                                new_map_data[x + 1][y + 1].h += moveheight;
+                                deduct += moveheight;
+                                break;
+                        }
+                    }
+                }
+                new_map_data[x][y].h -= deduct;
+                if (new_map_data[x][y].h < 0)
+                    new_map_data[x][y].h = 0;
+
+                /*double water = 0;
+                for(int j = 0; j < mapx; j++){
+                    for (int k = 0; k < mapy ; ++k) {
+                        cout.width(8);
+                        cout.precision(4);
+                        cout << new_map_data[j][k].h << "   ";
+                        water += new_map_data[j][k].h;
+                    }
+                    cout << endl;
+                }
+                cout << "total water: " << water << endl;*/
             }
-            cout << "total water: " << water << endl;*/
         }
     }
-    delete this->map_data;
+    //delete this->map_data;
+    destroy_map();
     this->map_data = new_map_data;
+}
+
+void map::flood(double h) {
+    int x = -1;
+    while (++x < this->mapx) {
+        this->map_data[x][0].h = h - this->map_data[x][0].z;
+        if (this->map_data[x][0].h < 0)
+            this->map_data[x][0].h = 0;
+
+        this->map_data[x][mapy - 1].h = h - this->map_data[x][mapy - 1].z;
+        if (this->map_data[x][mapy - 1].h < 0)
+            this->map_data[x][mapy - 1].h = 0;
+    }
+    int y = 0;
+    while (++y < this->mapy - 1) {
+        this->map_data[0][y].h = h - this->map_data[0][y].z;
+        if (this->map_data[0][y].h < 0)
+            this->map_data[0][y].h = 0;
+
+        this->map_data[mapx - 1][y].h = h - this->map_data[0][y].z;
+        if (this->map_data[mapx - 1][y].h < 0)
+            this->map_data[mapx - 1][y].h = 0;
+    }
 }
 
 void map::rain(int drops) {
@@ -445,7 +498,7 @@ void map::rain(int drops) {
     int num_drop = rand() % drops + 1;
     int i = -1;
 
-    // this->map_data[mapx/2][mapy/2].h += 10;
+    //this->map_data[mapx / 2][mapy / 2].h += 10;
 
     while (++i < num_drop) {
         int x = rand() % this->mapx;
@@ -456,5 +509,10 @@ void map::rain(int drops) {
 }
 
 void map::wave(double h) {
-    cout << "rain";
+    cout << "wave";
+    for (int x = 0; x < mapx; ++x) {
+        this->map_data[x][0].h = h - this->map_data[x][0].z;
+        if (this->map_data[x][0].h < 0)
+            this->map_data[x][0].h = 0;
+    }
 }

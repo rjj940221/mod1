@@ -143,28 +143,29 @@ int main(int ac, char **av) {
 
         memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
 
-        filemap.flood(3000);
-       // filemap.toString();
-        //for (int q = 0; q < 3; q++) {
-         //   filemap.flow();
-        //filemap.toString();
-        //}
+        //filemap.wave(20000);
+
+        filemap.toString();
+    /*    filemap.rain(1);
+        filemap.toString();
+        for (int q = 0; q < 30; q++) {
+            cout << "iteration " << endl;
+            filemap.flow();
+            filemap.toString();
+        }*/
 
         int x = -1;
         while (++x < MAPX) {
             int y = -1;
-            px = &pixels[((x  + 4) * SCREEN_WIDTH) + 8];
+            px = &pixels[((x + 4) * SCREEN_WIDTH) + 8];
             while (++y < MAPY) {
                 *px = filemap.get_color(x, y);
                 px++;
             }
         }
 
-        // iso_map(pixels, &filemap);
-
-
+        int h = 10;
         while (!quit) {
-            int h = 10;
             SDL_UpdateTexture(sdl.texture, NULL, pixels, SCREEN_WIDTH * sizeof(uint32_t));
 
             while (SDL_PollEvent(&event)) {
@@ -173,16 +174,19 @@ int main(int ac, char **av) {
                         quit = true;
                 }
             }
-            //if (h < 4000)
-            //{
-          //      h += 1000;
-            //    filemap.flood(h);
-            //}
-
             SDL_RenderClear(sdl.render);
             SDL_RenderCopy(sdl.render, sdl.texture, NULL, NULL);
             SDL_RenderPresent(sdl.render);
+
+            if (h < 8000)
+            {
+                filemap.flood(h);
+                h += 100;
+            }
+            //filemap.rain(500);
+            //filemap.wave(5000);
             filemap.flow();
+
             int x = -1;
             while (++x < MAPX) {
                 int y = -1;
@@ -200,6 +204,7 @@ int main(int ac, char **av) {
 
         SDL_DestroyWindow(sdl.window);
         SDL_Quit();
+        filemap.toString();
     } else
         cout << "the file you passed is not recognised" <<
              endl;
