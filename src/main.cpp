@@ -94,9 +94,9 @@ void iso_map(uint32_t *px, map *filemap) {
     int ix = -1;
     int iy;
 
-    while (++ix < 300) {
+    while (++ix < MAPX) {
         iy = -1;
-        while (++iy < 300) {
+        while (++iy < MAPY) {
             t_point temp = filemap->get_point(ix, iy);
             /*double rand;
             rand = temp.z;
@@ -116,97 +116,110 @@ void iso_map(uint32_t *px, map *filemap) {
 
 }
 
+void color_map(map *filemap, uint32_t *pixels) {
+    uint32_t *px;
+
+    int x = -1;
+    while (++x < MAPX) {
+        int y = -1;
+        px = &pixels[((x + 4) * SCREEN_WIDTH) + 8];
+        while (++y < MAPY) {
+            *px = filemap->get_color(x, y);
+            px++;
+        }
+    }
+}
+
+void SDL_loop(map filemap, t_sdl sdl, int type) {
+    bool quit = false;
+    SDL_Event event;
+    int h = 0;
+    uint32_t *pixels = (uint32_t *) malloc(SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
+
+    memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
+    color_map(&filemap, pixels);
+    while (!quit) {
+        SDL_UpdateTexture(sdl.texture, NULL, pixels, SCREEN_WIDTH * sizeof(uint32_t));
+
+        while (SDL_PollEvent(&event)) {
+            switch (event.type) {
+                case SDL_QUIT:
+                    quit = true;
+            }
+        }
+        SDL_RenderClear(sdl.render);
+        SDL_RenderCopy(sdl.render, sdl.texture, NULL, NULL);
+        SDL_RenderPresent(sdl.render);
+
+        switch (type)
+        {
+            case 1:
+                if (h < 5000)
+                    filemap.flood(h += 10);
+                break;
+            case 2:
+                filemap.wave(5000);
+                break;
+            case 3:
+                filemap.rain(ceil(50));
+                break;
+        }
+
+        filemap.flow();
+
+        color_map(&filemap, pixels);
+    }
+    delete[] pixels;
+}
+
 int main(int ac, char **av) {
     map filemap;
-    bool quit = false;
-    uint32_t *px;
-    SDL_Event event;
+    int type = 0;
+    char *file = NULL;
 
+    for (int i = 1; i < ac; ++i) {
+        if (type == 0 && strcmp(av[i], "-f") == 0) {
+            type = 1;
+            cout << "type flood: " << type << " com " << strcmp(av[i], "-f")<<endl;
+        }
+        else if (type == 0 && strcmp(av[i], "-w") == 0) {
+            type = 2;
+            cout << "type wave: " << type << endl;
+        }
+        else if (type == 0 && strcmp(av[i], "-r") == 0) {
+            type = 3;
+            cout << "type rain: " << type << endl;
+        }
+        else if (file == NULL)
+            file = av[i];
+        else
+            cout << "argument not recognised use ./mod1 [-r | -f | -w] 'file name'" << endl;
+    }
 
-    if (ac == 2 && regex_match(av[1], regex(".*([.]mod1)$"))) {
-        cout << "arg passed test" << endl;
-        read_file(av[1], &filemap);
-        //  filemap.toString();
-
-
+    if (type == 0) {
+        cout << "using flooding pattern" << endl;
+        type = 1;
+    }
+    cout << "type: " << type << endl;
+    if (file && (regex_match(file, regex(".*([.]mod1)$")))) {
+        read_file(file, &filemap);
         t_sdl sdl;
-        SDL_Init(SDL_INIT_VIDEO);
 
-        sdl.window = SDL_CreateWindow("SDL2 Pixel Drawing",
+        SDL_Init(SDL_INIT_VIDEO);
+        sdl.window = SDL_CreateWindow("mod1",
                                       SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 
         sdl.render = SDL_CreateRenderer(sdl.window, -1, 0);
         sdl.texture = SDL_CreateTexture(sdl.render,
                                         SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH,
                                         SCREEN_HEIGHT);
-        uint32_t *pixels = (uint32_t *) malloc(SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
-
-        memset(pixels, 155, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(uint32_t));
-
-        //filemap.wave(20000);
-
-        filemap.toString();
-    /*    filemap.rain(1);
-        filemap.toString();
-        for (int q = 0; q < 30; q++) {
-            cout << "iteration " << endl;
-            filemap.flow();
-            filemap.toString();
-        }*/
-
-        int x = -1;
-        while (++x < MAPX) {
-            int y = -1;
-            px = &pixels[((x + 4) * SCREEN_WIDTH) + 8];
-            while (++y < MAPY) {
-                *px = filemap.get_color(x, y);
-                px++;
-            }
-        }
-
-        int h = 10;
-        while (!quit) {
-            SDL_UpdateTexture(sdl.texture, NULL, pixels, SCREEN_WIDTH * sizeof(uint32_t));
-
-            while (SDL_PollEvent(&event)) {
-                switch (event.type) {
-                    case SDL_QUIT:
-                        quit = true;
-                }
-            }
-            SDL_RenderClear(sdl.render);
-            SDL_RenderCopy(sdl.render, sdl.texture, NULL, NULL);
-            SDL_RenderPresent(sdl.render);
-
-            if (h < 8000)
-            {
-                filemap.flood(h);
-                h += 100;
-            }
-            //filemap.rain(500);
-            //filemap.wave(5000);
-            filemap.flow();
-
-            int x = -1;
-            while (++x < MAPX) {
-                int y = -1;
-                px = &pixels[((x + 4) * SCREEN_WIDTH) + 8];
-                while (++y < MAPY) {
-                    *px = filemap.get_color(x, y);
-                    px++;
-                }
-            }
-        }
-
-        delete[] pixels;
+        SDL_loop(filemap, sdl, type);
         SDL_DestroyTexture(sdl.texture);
         SDL_DestroyRenderer(sdl.render);
 
         SDL_DestroyWindow(sdl.window);
         SDL_Quit();
-        filemap.toString();
     } else
-        cout << "the file you passed is not recognised" <<
-             endl;
+        cout << "the file you passed is not recognised" << endl;
     return 0;
 }

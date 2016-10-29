@@ -32,6 +32,31 @@ void fill_space(double x) {
     cout << " ";
 }
 
+double map::dit_to_edge(int x, int y) {
+    double dist;
+    double tx;
+    double ty;
+
+    tx = (x < (mapx - 1) / 2) ? 0 : mapx - 1;
+    ty = (y < (mapy - 1) / 2) ? 0 : mapy - 1;
+
+    x = x * scalex;
+    tx = tx * scalex;
+    y = y * scaley;
+    ty = ty * scaley;
+
+    double ab_x = ABS(tx - x);
+    double ab_y = ABS(ty - y);
+
+    if (ab_x < ab_y) {
+        dist = sqrt(pow((x - tx), 2) + 0);
+    }
+    else {
+        dist = sqrt(0 + pow((y - ty), 2));
+    }
+    return dist;
+}
+
 map::map() {
 
 }
@@ -80,10 +105,10 @@ map::map(vector <t_point> points, int mapx, int mapy) {
     cout << "scalex " << scalex << " scaley " << scaley << endl;
 
     // add points to pull the corners to 0
-    this->points.push_back(t_point{0, 0, 0, 0, 0});
+    /*this->points.push_back(t_point{0, 0, 0, 0, 0});
     this->points.push_back(t_point{0, (this->mapy - 1) * scaley, 0, 0, 0});
     this->points.push_back(t_point{(this->mapx - 1) * scalex, 0, 0, 0, 0});
-    this->points.push_back(t_point{(this->mapx - 1) * scalex, (this->mapy - 1) * scaley, 0, 0, 0});
+    this->points.push_back(t_point{(this->mapx - 1) * scalex, (this->mapy - 1) * scaley, 0, 0, 0});*/
 
 
     //place min and max heights on 0 to make color scale e.g. min = 3 max = 9 moves to min = 0 max = 6
@@ -100,7 +125,8 @@ map::map(vector <t_point> points, int mapx, int mapy) {
             //this->map_data[x][y].water = false;
             this->map_data[x][y].h = 0;
             //IDW interprolation function call
-            this->map_data[x][y].z = infer_height(this->map_data[x][y].x, this->map_data[x][y].y);
+            this->map_data[x][y].z = (x == 0 || y == 0 || x == mapx - 1 || y == mapy - 1) ? 0 :
+                                     infer_height(this->map_data[x][y].x, this->map_data[x][y].y, dit_to_edge(x, y));
             y++;
         }
         x++;
@@ -116,7 +142,7 @@ void map::destroy_map() {
     delete map_data;
 }
 
-double map::infer_height(int x, int y) {
+double map::infer_height(int x, int y, double dist) {
     double numer = 0;
     double denom = 0;
     t_point temp;
@@ -131,6 +157,8 @@ double map::infer_height(int x, int y) {
         numer += (temp.z / pow(temp.dist, 2));
         denom += (1 / pow(temp.dist, 2));
     }
+    numer += (0 / pow(dist, 2));
+    denom += (1 / pow(dist, 2));
     return (numer / denom);
 }
 
@@ -275,7 +303,8 @@ double get_move_volume(double *external_presur, double internal_presure, int end
     }
     return (ave);
 }
-double split_move_volume(double *external_presur, double internal_presure, int end){
+
+double split_move_volume(double *external_presur, double internal_presure, int end) {
     double total = internal_presure;
     double unit = 0;
     double ave;
@@ -316,7 +345,7 @@ double map::get_ave_alt(int x, int y) {
             ave += temp->z;
         }
     }
-    temp = get_next(x , y + 1);
+    temp = get_next(x, y + 1);
     if (temp) {
         count++;
         ave += temp->z;
@@ -493,7 +522,6 @@ void map::flood(double h) {
 }
 
 void map::rain(int drops) {
-    cout << "rain run" << endl;
     double h = 0;
     int num_drop = rand() % drops + 1;
     int i = -1;
@@ -509,7 +537,6 @@ void map::rain(int drops) {
 }
 
 void map::wave(double h) {
-    cout << "wave";
     for (int x = 0; x < mapx; ++x) {
         this->map_data[x][0].h = h - this->map_data[x][0].z;
         if (this->map_data[x][0].h < 0)

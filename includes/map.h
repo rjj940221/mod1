@@ -4,6 +4,7 @@
 #define MOD1_MAP_H_H
 # define GRAVITY 9.8
 # define WATER_LIQUID_DENCITY 1000
+# define ABS(x) (x < 0) ? x * -1 : x
 # include <vector>
 # include <iostream>
 # include <math.h>
@@ -23,7 +24,7 @@ class map{
 public:
     map();
     map(vector <t_point> oints, int mapx, int mapy);
-    double infer_height(int x, int y);
+    double infer_height(int x, int y, double dist);
     t_point *nerest_points(double x, double y);
     double get_presure(double h);
     void toString();
@@ -39,6 +40,7 @@ public:
     double  solve(t_point **map, int primx, int primy, int secondx, int secondy, double presur);
     double  get_height(double pesure);
     double  get_ave_alt(int x, int y);
+    double  dit_to_edge(int x, int y);
 
 private:
     double      scalex;
